@@ -6,62 +6,49 @@
     <title>Coursera JS practice</title>
 
     <style>
-     table, th, td {
-       border: 2px solid red;
-       border-collapse: collapse;
-       border-spacing: 20px;
+     ul{
+       list-style-type:none;
+       height: 60px;
+       background-color: mintcream;
+     }
+     ul li{
+       float: left;
        padding: 20px;
-       text-align: left;
+       
+     }
+     a{
+       text-decoration: none;
+       color: lavenderblush;
+       display: block;
+     }
+    ul li:hover{
+       width: 60px;
+       text-align: center;
+       background-color: lightslategray;
      }
 
-     th:nth-of-type(even){
-       color: green;
-     }
+     
     </style>
   </head>
   <body>
-    <h1>My table</h1>
-    <table>
-      <caption>my table 1</caption>
-      <thead>
-        <tr >
-          <th rowspan="2">Name</th>
-          <th>eno</th>
-          <th>salary</th>
-          <th colspan="3">phone no</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr >
-          <td>chandan</td>
-          <td>1</td>
-          <td>10000</td>
-          <td>778676575676</td>
-          <td>778676575676</td>
-          <td>778676575676</td>
-        </tr>
-        <tr>
-          <td>akash</td>
-          <td>2</td>
-          <td>20000</td>
-          <td>8797999797</td>
-          <td>8797999797</td>
-          <td>8797999797</td>
-        </tr>
-        <tr>
-          <td>aman</td>
-          <td>3</td>
-          <td>40000</td>
-          <td>6547465867</td>
-        </tr>
-        <tr>
-          <td>nitish</td>
-          <td>4</td>
-          <td>2000</td>
-          <td>89989987997</td>
-        </tr>
-      </tbody>
-    </table>
+    <ul>
+     <a href="#home"><li>Home</li></a> 
+     <a href="#about"><li>About</li></a> 
+     <a href="#contact"><li>Contact</li></a> 
+     <a href="#Search"><li>Search</li></a> 
+    </ul> 
+    <br>
+    <h1>My List Prctc</h1>
+
+    <ol type="A" start="40">
+      <li>this 1</li>
+      <li>this 2</li>
+      <li>this 3</li>
+      <li>this 4</li>
+     
+    </ol>
+    
+    
 
     <script src="JSprctc.js"></script>
   </body>
