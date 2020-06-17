@@ -3,20 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coursera JS practice</title>
-
+    <title>w3 schools JS practice</title>
+    
     <style>
-     
+      *{
+        box-sizing: border-box;
+      }
 
+     h1{
+       text-align: center;
+     }
+    
+     div{
+       background-color: ivory;
+       height: 200px;
+     }
+
+     section{
+       background-color: lawngreen;
+       border: 2px solid ;
+       height: 200px;
+       width: 33.3%;
+       float: left;
+     }
+
+     @media (max-width: 900px){
+       div section{
+          height: 33.33%;
+          width: 100%;
+        }
+
+        section h2{
+          font-size:3vw ;
+        }
+     }
      
     </style>
   </head>
   <body>
 
 
-    <h1>This is my iframe</h1>
+    <h1>This is media query usage</h1>
+
+    <div>
+      <section>
+        <h2>LEFT </h2>
+      </section>
+      <section>
+        <h2>MAIN</h2>
+      </section>
+      <section>
+        <h2>RIGHT</h2>
+      </section>
+
+    </div>
+
     
-    <iframe width="800" height="800" src="https://limitless-everglades-43165.herokuapp.com/siteplaces" frameborder="0" allowfullscreen></iframe>
     <script src="JSprctc.js"></script>
   </body>
 </html>
