@@ -12,60 +12,16 @@
     </style>
   </head>
   <body>
-    <h1>making a html form with new tags and attributes</h1>
-    <form action="#" method="GET">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" />
-      <label for="email" id="email">email</label>
-      <input type="email" name="email" />
+    <h1>using video and audio tags</h1>
 
-      <br />
-      <br />
+    <video width="500px" height="500px">
+      <source src="https://www.youtube.com/embed/5FEB5DQklgM" type="mp4">
+      hello
+    </video>
 
-      <label for="fav">Fav movie</label>
-      <br />
-      <label for="fav">m1</label>
-      <input type="radio" name="fav movie" value="m1" />
-      <label for="fav">m2</label>
-      <input type="radio" name="fav movie" value="m2" />
-      <label for="fav">m3</label>
-      <input type="radio" name="fav movie" value="m3" />
-      <br />
-
-      <fieldset>
-        <legend>Your Gender</legend>
-        <select name="gender" id="gender" size="5" multiple>
-          <option value="male">Male</option>
-          <option value="Female" selected>Female</option>
-          <option value="others">others</option>
-        </select>
-      </fieldset>
-
-      <br />
-
-      <fieldset>
-        <legend>
-          Select your Fav movie
-        </legend>
-        <input list="movies" />
-        <datalist id="movies">
-          <option value="jumanji"></option>
-          <option value="avengers"></option>
-          <option value="spiderman"></option>
-          <option value="batman"></option>
-        </datalist>
-      </fieldset>
-
-      <br />
-      <label for="textarea">tell something about yourself</label><br />
-      <textarea name="about" id="textarea" cols="80" rows="5"></textarea>
-
-      <input type="file" />
-      <input type="date" />
-      <input type="time" />
-      <br />
-      <input type="submit" />
-    </form>
+    <iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
 
     <script src="JSprctc.js"></script>
   </body>
