@@ -33,9 +33,29 @@
      /* div+p {
        background-color: cyan;
      } */
-     
+
      div~p {
        background-color: cyan;
+     }
+
+     /* a[href]{
+       color: rgb(150, 20, 236);
+     } */
+     
+     /* [href="http://google.com"]{
+       color: rgb(150, 20, 236);
+     } */
+
+     [alt~=is]{
+       border: 3px solid yellow;
+     }
+
+     /* p:nth-of-type(even){
+       background-color: yellow;
+     } */
+
+     p:only-child{
+       background-color: yellow;
      }
      
     </style>
@@ -57,12 +77,18 @@
     <P class="p3">Quia sed laboriosam impedit quos ducimus ipsa, repellat explicabo quam sunt quo voluptates, consequatur aut, eos quas quaerat! Beatae, natus.</P>
 
     <div>
- <P class="p4">Eaque ipsam, voluptatem ratione aliquam inventore consectetur a necessitatibus quo vitae dignissimos ducimus, itaque adipisci minima ab impedit quos nihil.</P>
+      <br>
+
+    <a href="http://google.com" title="this is link of flower">link to the google </a>
+    
+    <img src="https://www.w3schools.com/cssref/klematis.jpg" alt="this is img" title="flower image" width="300px" height="200px">
+ <br>
+    <P class="p4">Eaque ipsam, voluptatem ratione aliquam inventore consectetur a necessitatibus quo vitae dignissimos ducimus, itaque adipisci minima ab impedit quos nihil.</P>
  <br>
  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet debitis cum distinctio dicta ratione nostrum doloremque magni explicabo earum mollitia.</p>
     </div>
    
-    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi vel, sed commodi nobis provident quis cum perspiciatis explicabo odio magnam officia unde cumque quo aliquid odit, quas ex, doloremque facere.</h4>
+    <h4 href="https://" alt="this is alt in h4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi vel, sed commodi nobis provident quis cum perspiciatis explicabo odio magnam officia unde cumque quo aliquid odit, quas ex, doloremque facere.</h4>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quod quam similique optio officia pariatur ea consectetur vitae corrupti totam?</p>
 
    <div class="div">
