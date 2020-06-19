@@ -9,43 +9,48 @@
       * {
         box-sizing: border-box;
       }
+
+      .p1.p12{
+        background-color: indianred;
+      }
+
+      .p1,.p2{
+        color:lawngreen
+      }
+     
+      p > .s1{
+        color:yellow;
+      }
+
      
     </style>
   </head>
  
   <body>
     
-    <p>Count numbers: <output id="result"></output></p>
-<button onclick="startWorker()">Start Worker</button> 
-<button onclick="stopWorker()">Stop Worker</button>
+    <h1>
+      practice of css selectors
+    </h1>
 
-<p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web Workers.</p>
+    <P class="p1 p12">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+      <span>
+        this is the span
+      </span class="s1"> Nulla consequatur, repellendus distinctio accusamus neque nemo eaque similique nisi unde nihil?</P>
+    <P class="p2">Quasi praesentium consequuntur unde officiis aliquam quisquam magnam mollitia impedit, facere maxime debitis deleniti iure? Facere ducimus eligendi dolore ex?</P>
+    <P class="p3">Quia sed laboriosam impedit quos ducimus ipsa, repellat explicabo quam sunt quo voluptates, consequatur aut, eos quas quaerat! Beatae, natus.</P>
+    <P class="p4">Eaque ipsam, voluptatem ratione aliquam inventore consectetur a necessitatibus quo vitae dignissimos ducimus, itaque adipisci minima ab impedit quos nihil.</P>
 
-<script>
-var w;
+   <div>
+     <h2 class="h2">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero, repellendus distinctio laborum iste rerum aperiam sapiente soluta tenetur ad.</p>
+   </div>
 
-function startWorker() {
-  if(typeof(Worker) !== "undefined") {
-    if(typeof(w) == "undefined") {
-      w = new Worker("demo_workers.js");
-    }
-    w.onmessage = function(event) {
-      document.getElementById("result").innerHTML = event.data;
-    };
-  } else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
-  }
-}
-
-function stopWorker() { 
-  w.terminate();
-  w = undefined;
-}
-</script>
-
-
-
-
+   <section>
+     <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+     <article>
+       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui quidem obcaecati rerum illo vel nulla, quae numquam sequi quaerat amet?
+     </article>
+   </section>
     
   </body>
 
