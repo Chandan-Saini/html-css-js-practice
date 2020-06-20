@@ -6,27 +6,45 @@
     <title>w3 schools CSS practice</title>
 
     <style>
-   body{
-     background-color: black;
-     color: yellowgreen;
-   }
+   
      
      .p1{
-       box-sizing: border-box;
-       border: 2px solid red;
-       background-color: blanchedalmond;
-       padding: 10px;
-       margin: 200px;   
-       max-width: 80%;
-       height: 400px;
-       overflow:scroll;
-       /* outline-width: 20px;
-       outline-style: dashed ;
-       outline-color: red; */
-
-       outline: 10px solid pink;
-       outline-offset: 20px;
+        color:crimson;
+        /* text-align: center; */
+       /* text-align: justify; */
+      /* text-align: right; */
+      
+       direction: rtl;
+       text-transform: capitalize;
        
+
+
+      }
+
+      .p2{
+        direction: rtl;
+        unicode-bidi: bidi-override;
+        /* vertical-align:top; */
+        text-transform:uppercase;
+      }
+
+      .p2 span{
+        color: cyan;
+        /* vertical-align:middle; */
+        /* text-decoration: line-through; */
+        /* text-decoration:underline; */
+        text-decoration:overline;
+
+      }
+
+      .p3{
+         text-indent: 50px;
+         line-height: 5;
+         word-spacing: 20px;
+         letter-spacing: 5px;
+         /* white-space: nowrap; */
+         text-shadow: 5px 2px 2px  red ;
+
       }
 
     </style>
@@ -41,9 +59,13 @@
       practice of css outline
     </h1>
 
-    <p class="p1">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nulla, dolorem distinctio, hic laudantium quaerat libero expedita exercitationem ab nemo dolor ut error quisquam dicta pariatur mollitia et accusantium doloremque voluptates aliquam ratione praesentium. Quos, animi adipisci. Labore iure excepturi sed deleniti illum eum porro, laboriosam molestiae, quisquam fugit eveniet libero adipisci laudantium facere recusandae dolorum accusantium unde consectetur. Dignissimos sequi, architecto deserunt aut facilis, eligendi commodi cum nulla consequatur ullam blanditiis itaque eum illum hic? Nesciunt cumque labore placeat ullam deleniti inventore, aperiam a fugiat neque nulla sed magnam amet exercitationem delectus natus incidunt eius illo repudiandae omnis sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam doloremque, nesciunt iusto nisi consequatur maxime quasi atque accusamus commodi magnam error iste excepturi eos ut nulla praesentium placeat libero deleniti repellendus minima corrupti nostrum quis. Vero ipsa placeat voluptas numquam, reprehenderit assumenda quam repudiandae unde libero debitis, aut, eligendi fugit ex expedita necessitatibus! Aperiam, error ipsum asperiores et distinctio deserunt delectus atque sequi doloremque fugit, reiciendis laudantium non necessitatibus velit repellat nulla quibusdam, facere ipsa. Quam sit aut voluptatem nostrum molestiae, optio aspernatur consequuntur, id deleniti sapiente illo distinctio rem eos fugiat. Labore quia voluptatem, ratione molestias impedit beatae commodi nisi hic nostrum aperiam? Repudiandae expedita autem necessitatibus iste distinctio fugiat. Expedita, vitae dignissimos. Pariatur voluptate placeat sint repellat. Eos laudantium dolor, officiis fuga ratione culpa excepturi, nulla doloribus minima ex consequuntur nam minus quam inventore distinctio tenetur. Quo, neque minima quia ex fugiat praesentium beatae adipisci? Velit deserunt ipsam sequi ratione architecto aperiam voluptates alias quisquam accusantium, sint quaerat, beatae nam assumenda eius esse ab corporis eligendi amet obcaecati placeat asperiores. Libero accusamus, vel in temporibus doloribus quod accusantium possimus obcaecati, quisquam veniam atque veritatis! Earum beatae, minima necessitatibus, doloribus molestiae, labore excepturi quo quae aspernatur distinctio illum exercitationem..</p>
-    <p class="p2">Corporis, iste tempore ea quis nulla dolor aut explicabo molestiae illo ipsam? Mollitia vel sunt velit doloribus tempora quod vitae?</p>
+    <p class="p1">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nulla, dolorem distinctio, hic laudantium quaerat libero expedita exercitationem ab nemo dolor ut error quisquam dicta pariatur mollitia et accusantium doloremque voluptates aliquam ratione praesentium. Quos, animi adipisci. Labore iure excepturi sed deleniti illum eum porro, laboriosam molestiae, quisquam fugit eveniet libero adipisci  doloribus molestiae, labore excepturi quo quae aspernatur distinctio illum exercitationem..</p>
+
+    <p class="p2">Corporis,<span>
+      this is the span
+    </span> iste tempore ea quis nulla dolor aut explicabo molestiae </p>
     
+    <p class="p3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius magnam accusamus quo suscipit laudantium id sed exercitationem reprehenderit consectetur sequi?</p>
 
     
   </body>
