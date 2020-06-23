@@ -6,45 +6,60 @@
     <title>w3 schools CSS practice</title>
 
     <style>
-     img{
-        /* float:left; */
-        float: right;
-        display: block;
-        width: 200px ;
+      .s1{
+        display: inline;
+        background-color: aqua;
+        width: 200px;
         height: 200px;
-        
-     }
-
-     p{
-       border: 2px solid red;
-       /* clear: right; */
-       overflow: auto ;
-     }
-     
-    
-
+        border: 3px solid red;
+      }
+      .s2{
+        display: block;
+        background-color: aqua;
+        width: 200px;
+        height: 200px;
+        border: 3px solid red;
+      }
+      .s3{
+        display: inline-block;
+        background-color: aqua;
+        width: 200px;
+        height: 200px;
+        border: 3px solid red;
+      }
     </style>
   </head>
 
   <body>
     <h1>
-      practice of css float
+      practice of css inline-block
     </h1>
 
-    <div>
-     
-      <p>  <img src="https://www.visitsarasota.com/sites/default/files/styles/listing_node_full/public/mmg_lfef_images/img-academy-156-4239b0027814dc2844a6004c8472c147.jpg?itok=TfcBMXKE" alt=""> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic natus ipsa tempora odio dicta possimus ea, consequatur cupiditate magnam labore modi reprehenderit quos, impedit doloremque temporibus pariatur amet debitis numquam.
-        
-      
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aspernatur
+      laboriosam
+      <span class="s1">
+        hello
+      </span>
+      dignissimos fugit laudantium nihil voluptatem ex! Totam, corporis numquam.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. A nesciunt
+      perspiciatis
+      <span class="s2">
+        hello
+      </span>
+      animi dolorum ab laboriosam sequi tempora maxime, incidunt assumenda.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quos omnis
+      <span class="s3">
+        hello
+      </span>
+      eum recusandae illo officia laboriosam molestiae hic impedit
+      exercitationem!
     </p>
 
-    </div>
-
-    
-
-    
-
-    
     <script src="JSprctc.js"></script>
   </body>
 </html>
