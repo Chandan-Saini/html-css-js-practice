@@ -6,55 +6,48 @@
     <title>w3 schools CSS practice</title>
 
     <style>
-      *{
+      * {
         box-sizing: border-box;
-      }
-
-      div.vernav{
-       
-      }
-     
-      ul{
-         width: 40%;
-        
-        position: fixed;
-       background-color: green;
-        height: 100%;
         margin: 0px;
         padding: 0px;
-        list-style-type: none;
-        text-decoration: none;
-        border: 2px solid blue;
-        text-align: center;
-        
-
       }
 
-      li{
-        border-bottom: 2px solid blue;
-        border-collapse: collapse;
+      h1 {
+        margin: 30px;
       }
 
-      a{
+      ul {
+        background-color: black;
+      }
+
+      li {
+        display: inline-block;
+      }
+
+      a {
         display: block;
-        width: 100%;
-        padding: 30px 0px;
-        font-size: x-large;
-        
+        padding: 30px;
+        color: white;
+      }
+      a:hover {
+        background-color: gray;
+        color: white;
       }
 
-      a:hover{
-        background-color: yellow;
+      .dropli{
+        float:right;
       }
-     
-     div.cdiv{
-        width: 57%;
-        float: right;
-        /* border: 2px solid gray; */
-        /* margin-left: 50px; */
-     }
-      
-     
+      .dropc {
+        display: none;
+        width: 130px;
+        background-color: black;
+        position: absolute;
+        z-index: 1;
+      }
+
+      .dropli:hover .dropc {
+        display: block;
+      }
     </style>
   </head>
 
@@ -62,23 +55,22 @@
     <h1>
       practice of css nav horizontal and verticle
     </h1>
-    
-    <div class="vernav">
-      <ul class="verul">
-        <li class="verli"><a href="#">Home1</a></li>
-        <li class="verli"><a href="#">Home2</a></li>
-        <li class="verli"><a href="#">Home3</a></li>
-        <li class="verli"><a href="#">Home4</a></li>
-        <li class="verli5"><a href="#">Home5</a></li>
-      </ul>
-      
-    </div>
 
-    <div class="cdiv">
-      <p class="cp">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id debitis aut sunt quia doloribus, alias totam eligendi maxime esse cupiditate aliquam adipisci illum incidunt. Ipsa, beatae ad a rerum porro similique repellendus veniam fugit eaque quia assumenda at doloremque dicta nostrum. Veniam inventore illum iusto cum, et est exercitationem quis distinctio corporis reiciendis, molestiae doloremque voluptatum adipisci amet obcaecati qui deserunt possimus at recusandae vel? Temporibus iusto cumque, delectus exercitationem nam debitis non maxime quod placeat ducimus beatae voluptatem quo libero modi ea perferendis tempore omnis vero unde recusandae illo corporis dolores ab qui? Quibusdam possimus atque voluptas? Commodi, illum. Quasi earum, nesciunt consequatur omnis porro distinctio iste. Expedita quibusdam assumenda quo asperiores doloribus illo quia reprehenderit, cupiditate dicta sint, ipsa illum voluptate. Harum nesciunt tempora eveniet libero excepturi voluptates quam dolorum id illum eius eaque tenetur placeat praesentium, accusamus cum optio error quasi, minima sed reiciendis soluta laudantium? Aliquid eaque ab dolorum quas omnis vero, sunt incidunt tenetur id rem. Soluta ad quos officia impedit id natus. Excepturi et incidunt, culpa omnis dolore odit quos tempora nostrum iusto, aspernatur voluptatibus cumque mollitia, sit quisquam modi? Esse molestias quas possimus modi dolorum doloribus. Repellat facilis ipsum dicta porro doloribus laboriosam, impedit quod earum, corporis, incidunt reprehenderit omnis sed voluptas autem ullam a! Dignissimos ex obcaecati harum eligendi minus facere vero numquam debitis, accusantium animi non corrupti tempora iure magni, neque inventore ad nisi ipsam officia consequatur. Voluptatibus, quod laudantium? Repellat, distinctio veritatis eveniet magni recusandae ab beatae laboriosam sint optio doloribus et necessitatibus voluptate ratione dolores deserunt officiis perferendis molestiae pariatur ut. Fugiat libero quibusdam, excepturi ad quidem aliquam numquam veniam, reiciendis maxime repudiandae eius, est sequi laudantium dolorum consequatur quos. Odio enim at voluptate sit saepe sed, mollitia repudiandae deleniti nobis fuga quis itaque minima cumque hic voluptatibus veritatis doloremque tenetur odit repellendus illo? Tempore optio nemo odit, cum officiis quam eveniet voluptatum sunt earum cupiditate quisquam quaerat neque expedita dolorem sapiente libero rerum id sit voluptate doloribus? Fuga repellendus veniam vitae doloremque fugit omnis, autem numquam inventore dolorum sequi odio incidunt, nostrum hic, voluptate ut veritatis sit rerum earum maxime alias sint. Impedit, quos mollitia? Debitis dolores minus cupiditate magni, obcaecati amet quas inventore fugiat error eius accusamus molestiae pariatur sequi iusto molestias non, ratione exercitationem alias dolor. Non ullam, a quia maxime odit suscipit atque blanditiis fugiat voluptatum molestiae possimus animi, modi inventore culpa perspiciatis placeat ex sequi! Perspiciatis totam voluptates quis suscipit, dignissimos quo libero aliquam vel sed, repellat nemo nisi? Nisi in aperiam sunt! Voluptatibus vero ratione aperiam adipisci, nisi suscipit velit accusamus assumenda itaque hic rerum, minima corporis nemo odio. Ullam, ad fugit? Distinctio eius deleniti ipsum ipsa enim excepturi quisquam repudiandae rem quam aspernatur laboriosam cumque at fugiat commodi, unde error, modi magnam quos nulla reprehenderit! Neque inventore molestiae aut laboriosam dolore, itaque doloribus placeat blanditiis quaerat, ipsa et iusto ea corrupti, magnam sed accusantium? Quasi nam ullam tempore fuga incidunt pariatur dolores aspernatur qui deleniti? Ea illum consequuntur enim, laborum facilis magnam?
-      </p>
-    </div>
+    <ul>
+      <li><a href="#">Home1</a></li>
+      <li><a href="#">Home2</a></li>
+      <li><a href="#">Home3</a></li>
+      <li class="dropli">
+        <a class="dropbtn" href="#">Dropdown</a>
+        <div class="dropc">
+          <a href="">lin1</a>
+          <a href="">lin1</a>
+          <a href="">lin1</a>
+        </div>
+      </li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit doloribus quisquam magni, tempore ea eos repellat ipsum maiores reprehenderit sint aliquam quo, saepe ab repudiandae, hic illum rem molestias eveniet quod totam voluptas libero ratione consequatur? Provident culpa consequatur, accusantium neque adipisci harum voluptate vitae dolor in maxime dicta nihil repellat eos hic! Aut, neque veniam! Inventore, ratione adipisci expedita ducimus illum quod a, neque aliquid veritatis harum impedit minima? Consectetur ratione delectus fugit quaerat hic laborum possimus eaque? Vero similique voluptatum temporibus nihil, animi dolorem id excepturi corporis laborum illo voluptates soluta vel totam natus, fugit enim eos dolore tempore blanditiis deserunt consectetur? Nihil eos voluptatum, nesciunt voluptatibus consequatur laborum deleniti corporis illum eligendi neque sint tempore magni ea dolorem distinctio velit repellat veritatis libero laudantium, dolores aliquam praesentium totam? Perspiciatis dolorum sit accusamus aperiam optio, tenetur voluptatum adipisci expedita vitae dolor. Labore magnam eligendi asperiores sit. Corrupti, aliquam reiciendis tempora voluptatibus delectus alias obcaecati! Hic, sunt. Dolores blanditiis totam doloremque quibusdam molestiae neque, quam nam placeat! Veritatis ab numquam tempora, corporis ullam dolorum impedit reiciendis itaque voluptatum, minus quis error molestias necessitatibus? Omnis maxime illum qui tempore explicabo esse dolores animi sed delectus corrupti! Ad unde voluptatum molestias? Quae molestiae dolor voluptates ullam omnis blanditiis quidem tempora, quos, suscipit cum excepturi nobis libero dicta quis sint quia repudiandae! Deserunt quisquam dolores similique est libero laborum ullam, iure error quod architecto repudiandae accusantium fugit atque earum esse aliquam distinctio id rem veritatis pariatur tempora molestias! Velit ipsam odit culpa expedita itaque, beatae architecto eveniet veniam vel quasi nulla laborum? Libero optio perferendis obcaecati distinctio, rerum nesciunt corrupti, voluptas inventore tenetur est eum quibusdam asperiores hic magni quia, veritatis sed necessitatibus assumenda esse? Aliquam mollitia soluta doloribus quis eius quae, assumenda tempora quia quas ipsam ab, distinctio temporibus maxime maiores deserunt ducimus aut dolorem nihil porro eaque molestiae quasi dolor voluptates? Recusandae, saepe tempore? Veritatis dignissimos vitae est necessitatibus, aperiam recusandae facere sint blanditiis veniam itaque laboriosam laborum eaque temporibus nulla nisi. Sint quae natus quisquam porro rem eveniet vel distinctio quam aliquid obcaecati deleniti tenetur saepe eius dicta, sapiente sunt illo iure repellat provident libero alias repudiandae possimus praesentium suscipit! Quod, esse! Deserunt ipsum quas architecto tempora delectus dignissimos culpa ad sequi! Error totam iste tenetur saepe impedit expedita pariatur facilis? Id facere rem excepturi fugiat unde veritatis molestias? Error et labore, mollitia laboriosam quod accusamus excepturi vero nulla.</p>
 
     <script src="JSprctc.js"></script>
   </body>
