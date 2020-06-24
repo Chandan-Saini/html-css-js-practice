@@ -6,18 +6,17 @@
     <title>w3 schools CSS practice</title>
 
     <style>
-      ul{
-        
-        background-color: yellow;
-        border: 2px solid red;
-        
-        
+      p:hover{
+        background-color: blueviolet;
       }
-      li{
-        padding: 40px;
-         display: inline-block;
-         margin-left: 20px;
-         
+
+      div::first-line{
+        color: red;
+        font-size: x-large;
+      }
+
+      p::first-letter{
+        font-size: 100px;
       }
 
 
@@ -26,16 +25,18 @@
 
   <body>
     <h1>
-      practice of css inline-block
+      practice of css pseudo class and elements
     </h1>
-     <ul>
-       <li class="li"> <a href="home">Home</a></li>
-       <li class="li"> <a href="home">Home</a></li>
-       <li class="li"> <a href="home">Home</a></li>
-       <li class="li"> <a href="home">Home</a></li>
-       <li class="li"> <a href="home">Home</a></li>
-       
-     </ul>
+      <p class="p1">
+        <h2>this si head</h2>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus autem quae iure odit quos quibusdam rerum assumenda impedit, nam incidunt?
+      </p>
+       <div class="d1" >
+         <p class="p2d">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, dolore.
+         </p>
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, amet!
+       </div>
 
     <script src="JSprctc.js"></script>
   </body>
