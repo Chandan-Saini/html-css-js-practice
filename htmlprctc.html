@@ -9,24 +9,17 @@
       * {
         box-sizing: border-box;
         }
+    body{
+      counter-reset: section;
+    }
 
-div{
-  border: 2px solid black;
-}
-
-      input, select, textarea{
-        margin-top: 30px;
-        padding: 20px 50px;
-        width: 600px;
+    h2::before{
+      counter-increment: section;
+      content: "Part " counter(section) ":";
+    }
         
-      }    
 
-      label{
-        margin-right: 100px;
-        text-align: center;
-        vertical-align:middle;
-      }
-
+      
 
      
     </style>
@@ -34,36 +27,22 @@ div{
 
   <body>
     <h1>
-      practice of css forms
+      practice of css counters
     </h1>
 
-    <div class="container">
-      <form action="#">
-        <label for="fname">First Name</label>
-        <input type="text" name="name" id="fname" placeholder="Your name" ><br><br>
-        
-        <label for="lname">Last Name</label>
-        <input type="text" name="name" id="lname" placeholder="Your last name"><br><br>
+    <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+    <h2>Atque reprehenderit quis aspernatur voluptate, doloribus laudantium quo!</h2>
+    <h2>Quod voluptates minus, eos nulla quidem mollitia consequuntur?</h2>
+    <h2>Suscipit vel eaque maxime repellat nesciunt ex assumenda?</h2>
 
-        <label for="cont">Country Name</label>
-        <select name="country" id="cont">
-          <option value="Usa">USA</option>
-          <option value="India">India</option>
-          <option value="China">China</option>
-        </select><br><br>
-
-        <label for="texta">Tell Something</label>
-        <textarea name="pinfo" id="texta" placeholder="tell something.." >
-
-        </textarea>
+    
 
 
 
 
 
-      </form>
 
-    </div>
+  
      
   
     
