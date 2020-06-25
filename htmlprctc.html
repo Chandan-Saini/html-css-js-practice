@@ -9,22 +9,18 @@
       * {
         box-sizing: border-box;
       }
-      body {
+      ol{
         counter-reset: section;
+        list-style-type: none;
       }
-      h1 {
-        counter-reset: subsection;
+     
+
+      li::before {
+        counter-increment:section;
+        content:  counters(section , ".") " ";
       }
 
-      h2::before {
-        counter-increment: subsection;
-        content: "Part " counter(section) "." counter(subsection) ":";
-      }
-
-      h1::before {
-        counter-increment: section;
-        content: "heading" counter(section) ":";
-      }
+    
     </style>
   </head>
 
@@ -33,23 +29,31 @@
       practice of css counters
     </h1>
 
-    <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
-    <h2>
-      Atque reprehenderit quis aspernatur voluptate, doloribus laudantium quo!
-    </h2>
-    <h2>Quod voluptates minus, eos nulla quidem mollitia consequuntur?</h2>
-    <h2>Suscipit vel eaque maxime repellat nesciunt ex assumenda?</h2>
+    <ol>
+  <li>item</li>
+  <li>item   
+  <ol>
+    <li>item</li>
+    <li>item</li>
+    <li>item
+    <ol>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+    </ol>
+    </li>
+    <li>item</li>
+  </ol>
+  </li>
+  <li>item</li>
+  <li>item</li>
+</ol>
 
-    <h1>
-      practice of css counters
-    </h1>
+<ol>
+  <li>item</li>
+  <li>item</li>
+</ol>
 
-    <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
-    <h2>
-      Atque reprehenderit quis aspernatur voluptate, doloribus laudantium quo!
-    </h2>
-    <h2>Quod voluptates minus, eos nulla quidem mollitia consequuntur?</h2>
-    <h2>Suscipit vel eaque maxime repellat nesciunt ex assumenda?</h2>
 
     <script src="JSprctc.js"></script>
   </body>
