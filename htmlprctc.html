@@ -9,27 +9,23 @@
       * {
         box-sizing: border-box;
         }
-     img{
-       margin: 20px;
-     }
-     .home{
-       background: url(https://www.w3schools.com/css/img_navsprites.gif) 0px 0px;
-       width: 46px;
-       
-     }
 
-     .prev{
-       background: url(https://www.w3schools.com/css/img_navsprites.gif) -46px 0px;
-       width: 42px;
-       
-     }
+div{
+  border: 2px solid black;
+}
 
-     .next{
-       background: url(https://www.w3schools.com/css/img_navsprites.gif) -91px 0px;
-       width: 44px;
-      
-     }
+      input, select, textarea{
+        margin-top: 30px;
+        padding: 20px 50px;
+        width: 600px;
+        
+      }    
 
+      label{
+        margin-right: 100px;
+        text-align: center;
+        vertical-align:middle;
+      }
 
 
      
@@ -38,14 +34,37 @@
 
   <body>
     <h1>
-      practice of css sprites
+      practice of css forms
     </h1>
 
-    <img class="home" src="https://www.w3schools.com/css/img_trans.gif" alt="img">
-    <img class="prev" src="https://www.w3schools.com/css/img_trans.gif" alt="img">
-    <img class="next" src="https://www.w3schools.com/css/img_trans.gif" alt="img"> <br><br><br>
-    <img  src="https://www.w3schools.com/css/img_navsprites.gif" alt="img">
+    <div class="container">
+      <form action="#">
+        <label for="fname">First Name</label>
+        <input type="text" name="name" id="fname" placeholder="Your name" ><br><br>
+        
+        <label for="lname">Last Name</label>
+        <input type="text" name="name" id="lname" placeholder="Your last name"><br><br>
 
+        <label for="cont">Country Name</label>
+        <select name="country" id="cont">
+          <option value="Usa">USA</option>
+          <option value="India">India</option>
+          <option value="China">China</option>
+        </select><br><br>
+
+        <label for="texta">Tell Something</label>
+        <textarea name="pinfo" id="texta" placeholder="tell something.." >
+
+        </textarea>
+
+
+
+
+
+      </form>
+
+    </div>
+     
   
     
     
