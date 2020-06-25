@@ -8,33 +8,44 @@
     <style>
       * {
         box-sizing: border-box;
-        margin: 0px;
-        padding: 0px;
+        
       }
-
-      h1 {
+      h1{
         margin: 30px;
       }
+      
+      img{
 
-      div .img1 {
-        width: 100px;
-        height: 100px;
+        width: 24.5%;
+        /* height: 100%; */
+        margin-left: 3px;
+        float: left;
+        border: 1px solid black;
+        
       }
 
-      .img2 {
-        display: none;
-        position: absolute;
+      @media(max-width:700px){
+        
+        img{
+          width: 49%;
+          height: 100%;
+          margin-top: 10px;
+        }
+
+      }
+      
+
+      @media(max-width:500px){
+        
+        img{
+          width: 100%;
+          height: 100%;
+          margin-top: 10px;
+        }
+
       }
 
-      .content:hover .img2 {
-        /* position: absolute; */
-        /* top: 300px; */
-        /* left: 110px; */
-        /* background-image: url(https://image.shutterstock.com/image-photo/hydrangea-260nw-146582375.jpg); */
-        width: 400px;
-        height: 400px;
-        display: block;
-      }
+      
     </style>
   </head>
 
@@ -43,22 +54,14 @@
       practice of css image dropdown
     </h1>
 
-    <div class="content">
-      <div>
-      <img class="img1"
-        src="https://image.shutterstock.com/image-photo/hydrangea-260nw-146582375.jpg"
-        alt="img"
-      />
-    </div>
-    <div>
-      <img
-        class="img2"
-        src="https://image.shutterstock.com/image-photo/hydrangea-260nw-146582375.jpg"
-        alt="img2"
-      />
-    </div>
+  
+     <img src="https://images.freecreatives.com/wp-content/uploads/2016/02/Free-HD-Blue-Flowers-Background.jpeg" alt="img">
+     <img src="https://images.freecreatives.com/wp-content/uploads/2016/02/Free-HD-Blue-Flowers-Background.jpeg" alt="img">
+     <img class="rd" src="https://image.shutterstock.com/image-photo/hydrangea-260nw-146582375.jpg" alt="img">
+     <img  class="th" src="https://image.shutterstock.com/image-photo/hydrangea-260nw-146582375.jpg" alt="img">
 
-    </div>
+  
+    
     
 
     <script src="JSprctc.js"></script>
