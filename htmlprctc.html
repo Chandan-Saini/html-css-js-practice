@@ -9,16 +9,25 @@
       * {
         box-sizing: border-box;
       }
-      ol{
-        counter-reset: section;
-        list-style-type: none;
-      }
      
+     p{
+       background-color: brown;
+     }
 
-      li::before {
-        counter-increment:section;
-        content:  counters(section , ".") " ";
-      }
+     img{
+       height: 400px;
+     }
+
+     img,p{
+       /* border-radius:10px ; */
+
+       /* border-top-left-radius: 40px ; */
+
+       /* border-bottom-left-radius: 20px; */
+
+       border-radius: 50px 30px 10px 5px;
+
+     }
 
     
     </style>
@@ -29,31 +38,11 @@
       practice of css counters
     </h1>
 
-    <ol>
-  <li>item</li>
-  <li>item   
-  <ol>
-    <li>item</li>
-    <li>item</li>
-    <li>item
-    <ol>
-      <li>item</li>
-      <li>item</li>
-      <li>item</li>
-    </ol>
-    </li>
-    <li>item</li>
-  </ol>
-  </li>
-  <li>item</li>
-  <li>item</li>
-</ol>
+   <img src="https://images.freecreatives.com/wp-content/uploads/2016/02/Free-HD-Blue-Flowers-Background.jpeg" alt="">
 
-<ol>
-  <li>item</li>
-  <li>item</li>
-</ol>
-
+   <p>
+     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, amet laboriosam placeat molestias asperiores ipsum hic quisquam iste expedita similique provident accusamus, ducimus incidunt cumque magni quis minima, praesentium animi.
+   </p>
 
     <script src="JSprctc.js"></script>
   </body>
