@@ -6,53 +6,38 @@
     <title>w3 schools CSS practice</title>
 
     <style>
-      * {
-        box-sizing: border-box;
-      }
-     h1{
-       font-size: 4em;
-       text-transform: uppercase;
-       /* text-shadow: 3px 3px red; */
-       /* text-shadow: 3px 6px 10px red; */
-       text-shadow: 3px 6px 10px red, 4px 7px 30px yellow;
-     }
+            * {
+              box-sizing: border-box;
+            }
+           h1{
+             font-size: 2em;
+             text-transform: uppercase;
+             text-shadow: 3px 6px 10px red, 4px 7px 30px yellow;
+           }
 
-     img{
-        height: 300px;
-       width: 500px;
-     }
+           p{
+             white-space: nowrap;
+             border: 2px solid ;
+             width: 200px;
+             overflow: hidden;
+             /* text-overflow:ellipsis; */
+             text-overflow:clip;
+           }
 
-     .card{
-       height: 400px;
-       width: 500px;
-       margin-left: 30px;
-       border: 5px solid black;
-       overflow: hidden;
-       box-shadow: 10px 10px 20px  2px  chartreuse ;
-     }
-
-     .desc{
-       text-align: center;
-       margin: 25px;
-       font-size: 30px;
-     }
-    
+          
     </style>
   </head>
 
   <body>
     <h1>
-      practice of css box-shadow
+      practice of css text-effects
     </h1>
 
-   <div class="card">
-     <div class="cimg">
-         <img src="https://wallpapercave.com/wp/JCULCC4.jpg" alt="img">
-     </div>
-     <div class="desc">
-       This is the image desc
-     </div>
-   </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci minus
+      modi iusto nisi dolore nam!
+    </p>
+
     <script src="JSprctc.js"></script>
   </body>
 </html>
