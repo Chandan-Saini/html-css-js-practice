@@ -14,44 +14,67 @@
         text-transform: uppercase;
         text-shadow: 3px 6px 10px red, 4px 7px 30px yellow;
       }
-      
 
-      img{
-        width: 300px;
-        height: 300px;
-       margin: 30px auto ;
-       /* border-radius: 50%; */
-       /* border-radius: 200px; */
-       border-radius: 10px;
-       display: block;
-       /* opacity: .2; */
-       border: 1px solid ;
-       padding: 10px;
-       /* filter: blur(3px); */
-      /* filter: contrast(10); */
-      filter: hue-rotate(20deg);
-      
+      .container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+      }
+      img {
+        width: 400px;
+        height: 400px;
+        display: block;
       }
 
-      img:hover{
-        box-shadow: 5px 5px 10px 5px black;
-        /* opacity: 1; */
+      .indiv {
+        /* display: none; */
+        background-color: blueviolet;
+        width:0px ;
+        height: 400px;
+        color: yellow;
+        position: absolute;
+        bottom: 0px;
+        
+        left: 0px;
+        right: 0px;
+        overflow: hidden;
+        transition: 0.3s ease;
+
+       
       }
-   
+
+      .container:hover .indiv {
+        width: 400px;
+        /* height: 400px; */
+        /* bottom: 0px; */
+        
+      }
+      p{
+        white-space: nowrap;
+        /* text-align: center; */
+        /* padding-top: 40%; */
+        font-size: xx-large;
+        position: absolute;
+        left: 30%;
+        top: 40%;
+        
+      }
     </style>
   </head>
 
   <body>
     <h1>
-      practice of css image styling
+      practice of css image
     </h1>
 
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci minus
-      modi
-    </p>
-   
-    <img src="https://wallpapercave.com/wp/JCULCC4.jpg" alt="img">
+    <div class="container">
+      <img src="https://wallpapercave.com/wp/JCULCC4.jpg" alt="" />
+      <div class="indiv">
+        <p>
+          text is here
+        </p>
+      </div>
+    </div>
 
     <script src="JSprctc.js"></script>
   </body>
