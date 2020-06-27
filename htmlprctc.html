@@ -14,29 +14,31 @@
         text-transform: uppercase;
         text-shadow: 3px 6px 10px red, 4px 7px 30px yellow;
       }
-
-      button{
-        border: none;
-        padding: 40px;
-        width: 200px;
-        display: block;
-        background-color: tomato;
-        border-radius: 20px;
-        outline: none;
-        box-shadow: 0 10px rgb(204, 199, 199);
-        color: white;
-        font-size: 120%;
-        transition:  0.5s ;
+      
+      div{
+        text-align: center;
       }
+     a{
+       display: inline-block;
+       margin: 100px 5px;
+       border: 2px solid ;
+       padding: 10px 15px;
+       border-radius: 10px;
+       text-decoration: none;
+       color: black;
+       background-color: greenyellow;
+       transition: background-color 0.3s;
+     }
 
-       button:hover{
-          background-color: rgb(230, 148, 115);
-       }
-       button:active{
-            box-shadow: 0 2px rgb(78, 75, 75);
-            transform: translateY(10px);
-       }
+   .active{
+     background-color: red;
+   }
 
+   a:hover:not(.active){
+     background-color: white;
+     border: 1px solid ;
+   }
+   
 
       
 
@@ -47,12 +49,23 @@
 
   <body>
     <h1>
-      practice of css buttons
+      practice of css pagination
     </h1>
 
-     <button>
-       click me
-     </button>
+    <div>
+       <a href="#">  &laquo</a>
+    <a href="#">1</a>
+    <a class="active" href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#"> &raquo </a>
+
+
+    </div>
+   
+     
 
     <script src="JSprctc.js"></script>
   </body>
