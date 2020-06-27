@@ -21,26 +21,22 @@
         width: 200px;
         display: block;
         background-color: tomato;
-        border-radius: 10px;
+        border-radius: 20px;
+        outline: none;
+        box-shadow: 0 10px rgb(204, 199, 199);
         color: white;
         font-size: 120%;
-        opacity: 0.6;
         transition:  0.5s ;
       }
 
-      span{
-        color: transparent;
-        transition: 0.5s;
-      }
-
        button:hover{
-         opacity: 1;
-         padding-right: 50px ;
+          background-color: rgb(230, 148, 115);
        }
-      button:hover span{
-          color: white;
-          
-      }
+       button:active{
+            box-shadow: 0 2px rgb(78, 75, 75);
+            transform: translateY(10px);
+       }
+
 
       
 
@@ -55,7 +51,7 @@
     </h1>
 
      <button>
-       click me <span>>></span>
+       click me
      </button>
 
     <script src="JSprctc.js"></script>
