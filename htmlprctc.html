@@ -15,66 +15,39 @@
         text-shadow: 3px 6px 10px red, 4px 7px 30px yellow;
       }
 
-      .container {
-        width: 400px;
-        height: 400px;
-        position: relative;
-      }
-      img {
-        width: 400px;
-        height: 400px;
-        display: block;
+      img{
+        margin-top: 200px;
+        width: 700px;
+        height: 500px;
       }
 
-      .indiv {
-        /* display: none; */
-        background-color: blueviolet;
-        width:0px ;
-        height: 400px;
-        color: yellow;
-        position: absolute;
-        bottom: 0px;
-        
-        left: 0px;
-        right: 0px;
-        overflow: hidden;
-        transition: 0.3s ease;
+      .img2{
+         object-fit: cover;
+      }
+      
+      .img3{
+         object-fit: contain;
+      }
+      
+      .img4{
+         object-fit:scale-down;
+      }
+      
 
-       
-      }
 
-      .container:hover .indiv {
-        width: 400px;
-        /* height: 400px; */
-        /* bottom: 0px; */
-        
-      }
-      p{
-        white-space: nowrap;
-        /* text-align: center; */
-        /* padding-top: 40%; */
-        font-size: xx-large;
-        position: absolute;
-        left: 30%;
-        top: 40%;
-        
-      }
+    
     </style>
   </head>
 
   <body>
     <h1>
-      practice of css image
+      practice of css object fit
     </h1>
 
-    <div class="container">
-      <img src="https://wallpapercave.com/wp/JCULCC4.jpg" alt="" />
-      <div class="indiv">
-        <p>
-          text is here
-        </p>
-      </div>
-    </div>
+   <img src="https://marketplace.canva.com/EAD2-sy3snI/2/0/1600w/canva-tropical-happiness-zoom-virtual-background-JtPR2q13C4g.jpg" alt="" class="img1">
+   <img src="https://marketplace.canva.com/EAD2-sy3snI/2/0/1600w/canva-tropical-happiness-zoom-virtual-background-JtPR2q13C4g.jpg" alt="" class="img2">
+   <img src="https://marketplace.canva.com/EAD2-sy3snI/2/0/1600w/canva-tropical-happiness-zoom-virtual-background-JtPR2q13C4g.jpg" alt="" class="img3">
+   <img src="https://marketplace.canva.com/EAD2-sy3snI/2/0/1600w/canva-tropical-happiness-zoom-virtual-background-JtPR2q13C4g.jpg">
 
     <script src="JSprctc.js"></script>
   </body>
