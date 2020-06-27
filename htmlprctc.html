@@ -15,23 +15,33 @@
         text-shadow: 3px 6px 10px red, 4px 7px 30px yellow;
       }
 
-      img{
-        margin-top: 200px;
-        width: 700px;
-        height: 500px;
+      button{
+        border: none;
+        padding: 40px;
+        width: 200px;
+        display: block;
+        background-color: tomato;
+        border-radius: 10px;
+        color: white;
+        font-size: 120%;
+        opacity: 0.6;
+        transition:  0.5s ;
       }
 
-      .img2{
-         object-fit: cover;
+      span{
+        color: transparent;
+        transition: 0.5s;
       }
-      
-      .img3{
-         object-fit: contain;
+
+       button:hover{
+         opacity: 1;
+         padding-right: 50px ;
+       }
+      button:hover span{
+          color: white;
+          
       }
-      
-      .img4{
-         object-fit:scale-down;
-      }
+
       
 
 
@@ -41,13 +51,12 @@
 
   <body>
     <h1>
-      practice of css object fit
+      practice of css buttons
     </h1>
 
-   <img src="https://marketplace.canva.com/EAD2-sy3snI/2/0/1600w/canva-tropical-happiness-zoom-virtual-background-JtPR2q13C4g.jpg" alt="" class="img1">
-   <img src="https://marketplace.canva.com/EAD2-sy3snI/2/0/1600w/canva-tropical-happiness-zoom-virtual-background-JtPR2q13C4g.jpg" alt="" class="img2">
-   <img src="https://marketplace.canva.com/EAD2-sy3snI/2/0/1600w/canva-tropical-happiness-zoom-virtual-background-JtPR2q13C4g.jpg" alt="" class="img3">
-   <img src="https://marketplace.canva.com/EAD2-sy3snI/2/0/1600w/canva-tropical-happiness-zoom-virtual-background-JtPR2q13C4g.jpg">
+     <button>
+       click me <span>>></span>
+     </button>
 
     <script src="JSprctc.js"></script>
   </body>
