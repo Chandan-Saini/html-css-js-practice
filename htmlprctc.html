@@ -6,37 +6,21 @@
     <title>w3 schools CSS practice</title>
 
     <style>
-      * {
-        box-sizing: border-box;
-        --ocolor: red;
-        --width: 20px;
-      }
-
-      h1 {
-        font-size: 2em;
-        text-transform: uppercase;
-        text-shadow: 3px 6px 10px red, 4px 7px 30px yellow;
-      }
-      
-      div{
-        margin-top: 100px;
-        margin-bottom: 200px;
-        margin-left: 100px;
-        border: 3px solid var(--ocolor);
-        width: 400px;
-        outline: 15px solid rgb(0, 47, 255);
-        outline-offset: var(--width);
-      }
-
-      textarea{
-        border: 5px solid red;
-         margin-left: 100px;
-         outline: 15px solid var(--ocolor);
-         outline-offset: var(--width);
-
-        
-      }
      
+     .div1{
+        margin-bottom: 200px;
+        border: 2px solid red;
+        padding: 20px;
+        box-sizing: content-box;
+        width: 600px;
+     }
+      
+     .div2{
+        width: 600px;
+        border: 2px solid red;
+        padding: 20px;
+        box-sizing: border-box;
+     }
       
 
 
@@ -49,14 +33,17 @@
       practice of css outline offset
     </h1>
 
-    <div>
+    <div class="div1">
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim quasi possimus tempore dolor, eum distinctio incidunt, beatae corrupti voluptates repellendus illum maxime eligendi laudantium in quisquam nemo minus aperiam recusandae sint fuga dolorem.
 
     </div>
 
-    <textarea name="" id="" cols="30" rows="10">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, consequatur aperiam labore corrupti consequuntur cum iusto officia molestiae error temporibus?
-    </textarea>
+    <div class="div2">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim quasi possimus tempore dolor, eum distinctio incidunt, beatae corrupti voluptates repellendus illum maxime eligendi laudantium in quisquam nemo minus aperiam recusandae sint fuga dolorem.
+
+    </div>
+
+    
    
      
 
