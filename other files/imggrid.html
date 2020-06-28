@@ -34,12 +34,41 @@
        width: 100%;
        vertical-align: middle;
       margin-top: 8px;
+      border: 2px solid ;
+      border-radius: 10px;
+      transition: 1s;
+     
    }
 
+   img:hover{
+       /* flex: 100%;
+       max-width: 100%; */
+       transform: scale(2, 2);
+       
+   }
+
+   @media (max-width: 900px) {
+        div.column{
+            flex: 50%;
+            max-width: 50%;
+        }
+   }
+
+   @media (max-width: 700px) {
+        div.column{
+            flex: 100%;
+            max-width: 100%;
+        }
+   }
 
 
 </style>
 <body>
+
+    <div class="header">
+        <h1>This is the Image grid using CSS flexbox</h1>
+    </div>
+
     <div class="row">
         
 
