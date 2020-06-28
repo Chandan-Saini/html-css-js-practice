@@ -14,20 +14,13 @@
     div.container{
        display: flex;
        /* width: 700px; */
-       height: 600px;
+       /* height: 600px; */
        margin-top: 200px;
        border: 2px solid black;
        padding: 30px;
        background-color:  rgb(20, 151, 226);
        flex-wrap: wrap;
-       align-items: flex-start;
-       /* align-items:flex-end; */
-       /* align-items:center; */
-       /* align-items: baseline; */
-       /* align-content: space-between; */
-       /* align-content:space-around; */
-       /* align-content:center; */
-      /* align-content: flex-start; */
+       
 
     }  
 
@@ -40,6 +33,10 @@
       background-color: white;
       font-size: 30px;
       text-align: center;
+      /* flex-grow: 5; */
+      /* flex-shrink: 0; */
+      /* flex-basis:300px; */
+
       
     }
    
@@ -55,10 +52,10 @@
     </h1>
 
     <div class="container">
-      <div class="item">1</div>
+      <div class="item" style="order: 7;">1</div>
       <div class="item">2</div>
       <div class="item">3</div>
-      <div class="item">4</div>
+      <div class="item" style="order: 1;">4</div>
       <div class="item">5</div>
       <div class="item">6</div>
       <div class="item">7</div>
