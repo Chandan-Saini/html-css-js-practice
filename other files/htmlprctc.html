@@ -10,31 +10,26 @@
     *{
       box-sizing: border-box;
     }
-
-   div{
-     width:80%;
-     height: 600px;
-     /* background-image: url(https://www.gettyimages.com/gi-resources/images/500px/983801190.jpg); */
-   
-     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSXRvUBtumSw6XlzUX71fhs3hcSqe2Crm2bqQ&usqp=CAU);
-   
-     background-repeat: no-repeat;
-     background-size: cover;
-     
+  
+   h1{
+     margin-bottom: 100px;
    }
-    
+ 
+   .container{
+     display: grid;
+     grid-template-columns: auto auto auto ;
+     grid-template-rows: auto auto auto auto auto ;
+     background-color: yellowgreen;
+     padding: 20px;
+     grid-column-start: 3;
+   }
 
-    /* @media (max-width: 500px){
-      div{
-        background-image: url(https://www.gettyimages.com/gi-resources/images/500px/983801190.jpg);
-      }
-    } */
-
-    @media (max-device-width: 500px){
-      div{
-        background-image: url(https://www.gettyimages.com/gi-resources/images/500px/983801190.jpg);
-      }
-    }
+   .items{
+      background-color: teal;
+      border: 1px solid black;
+      padding: 30px;
+      text-align: center;
+   }
   
     
     </style>
@@ -42,15 +37,24 @@
 
   <body>
     <h1>
-      practice of css  images response
+      practice of css  grid
     </h1>
+
+    <div class="container">
+      <div class="items">1</div>
+      <div class="items">2</div>
+      <div class="items">3</div>
+      <div class="items">4</div>
+      <div class="items">5</div>
+      <div class="items">6</div>
+      <div class="items">7</div>
+      <div class="items">8</div>
+    </div>
 
     
    
    
-     <div class="cover">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, vero! Quam iure assumenda cupiditate natus quae totam dolorum animi nostrum officiis nihil! Quos harum, iure nesciunt animi, perferendis enim vero ipsum ea corrupti, pariatur magnam doloribus. Inventore iste voluptatibus, accusamus sit beatae sed expedita laboriosam quia reprehenderit, ab enim dolore?</p>
-     </div>
+    
    
 
     <script src="JSprctc.js"></script>
