@@ -15,35 +15,40 @@
      margin-bottom: 100px;
    }
  
+ .header{
+   grid-area: header;
+ }
+ .menu{
+   grid-area: menu;
+ }
+ .main{
+   grid-area: main;
+ }
+ .right{
+   grid-area: right ;
+ }
+ .footer{
+   grid-area: footer;
+ }
+
    .container{
      display: grid;
-     grid-template-columns: 30% 30% 30% ;
-     grid-template-rows: 100px 100px 100px;
      height: 500px;
      background-color: yellowgreen;
      padding: 20px;
-     grid-column-gap: 10px;
-     grid-row-gap: 10px;
-
     
-   }
+     grid-template-areas:'header header header header header header' 'menu menu main main right right' 'menu menu main main right right' 'menu menu main main right right' 'menu menu main main right right' 'menu menu footer footer footer footer' ;
 
-     .container div{
-      background-color: teal;
-      border: 1px solid black;
-    
+    }
+
+    .container div{
+      background-color: coral;
       text-align: center;
-   }
-
-  /* .items1{
-    grid-row: 2 / span 3;
-    grid-row: 1 /  4;
-  } */
-
-  .items1{
-    /* grid-column: 1/ span 3; */
-    grid-column: 1/ 4;
-  }
+      padding: 20px;
+      color: white;
+      border: 2px solid black;
+       margin: 2px;
+    }
     
     </style>
   </head>
@@ -54,14 +59,11 @@
     </h1>
 
     <div class="container">
-      <div class="items1">1</div>
-      <div class="items">2</div>
-      <div class="items">3</div>
-      <div class="items">4</div>
-      <div class="items">5</div>
-      <div class="items">6</div>
-      <div class="items">7</div>
-      <div class="items">8</div>
+      <div class="header">header</div>
+      <div class="menu">menu</div>
+      <div class="main">main</div>
+      <div class="right">right</div>
+      <div class="footer">footer</div>
     </div>
 
     
