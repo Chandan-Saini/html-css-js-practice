@@ -12,27 +12,30 @@
     }
 
    div{
-     width:400px;
+     width:80%;
      height: 600px;
      /* background-image: url(https://www.gettyimages.com/gi-resources/images/500px/983801190.jpg); */
    
      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSXRvUBtumSw6XlzUX71fhs3hcSqe2Crm2bqQ&usqp=CAU);
    
-   }
-
-   .cover{
-     background-size: cover;
-
-   }
-   .cont{
-     background-size: contain;
      background-repeat: no-repeat;
-
+     background-size: cover;
+     
    }
-   .hun{
-     background-size: 100% 100%;
+    
 
-   }
+    /* @media (max-width: 500px){
+      div{
+        background-image: url(https://www.gettyimages.com/gi-resources/images/500px/983801190.jpg);
+      }
+    } */
+
+    @media (max-device-width: 500px){
+      div{
+        background-image: url(https://www.gettyimages.com/gi-resources/images/500px/983801190.jpg);
+      }
+    }
+  
     
     </style>
   </head>
@@ -48,12 +51,7 @@
      <div class="cover">
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, vero! Quam iure assumenda cupiditate natus quae totam dolorum animi nostrum officiis nihil! Quos harum, iure nesciunt animi, perferendis enim vero ipsum ea corrupti, pariatur magnam doloribus. Inventore iste voluptatibus, accusamus sit beatae sed expedita laboriosam quia reprehenderit, ab enim dolore?</p>
      </div>
-     <div class="cont">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, vero! Quam iure assumenda cupiditate natus quae totam dolorum animi nostrum officiis nihil! Quos harum, iure nesciunt animi, perferendis enim vero ipsum ea corrupti, pariatur magnam doloribus. Inventore iste voluptatibus, accusamus sit beatae sed expedita laboriosam quia reprehenderit, ab enim dolore?</p>
-     </div>
-     <div class="hun">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, vero! Quam iure assumenda cupiditate natus quae totam dolorum animi nostrum officiis nihil! Quos harum, iure nesciunt animi, perferendis enim vero ipsum ea corrupti, pariatur magnam doloribus. Inventore iste voluptatibus, accusamus sit beatae sed expedita laboriosam quia reprehenderit, ab enim dolore?</p>
-     </div>
+   
 
     <script src="JSprctc.js"></script>
   </body>
