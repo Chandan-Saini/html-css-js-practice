@@ -21,17 +21,21 @@
    
 
     <script >
-    var jw=70, jh=1.5, mw=60,mh=2.2, bmij,bmim;
-    
-bmij= jw/(jh*jh)
-bmim= mw/(mh*mh)
+     
+     var age=61;
 
-if (bmij < bmim) {
-  console.log("BMI of john is greater than marks ");
-} else{
-  console.log("BMI of marks is greater than john ");
-
-}
+     if (age<13) {
+       console.log("this is a boy");
+     }
+     else if (age>13 && age<=20 ) {
+       console.log("this is a teen");
+     }
+     else if (age>20 && age<=60) {
+       console.log("this is a man");
+     }
+     else {
+       console.log("this is a old man");
+     }
 
     </script>
   </body>
