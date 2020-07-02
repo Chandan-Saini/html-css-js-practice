@@ -5,38 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>udemy JS practice</title>
 
-    <style>
-
-    </style>
+    <style></style>
   </head>
 
   <body>
     <h1>
       practice of JS if else
     </h1>
-  
-    
-   
-    
-   
 
-    <script >
-     
-     var age=61;
+    <script>
+      var age = 10;
 
-     if (age<13) {
-       console.log("this is a boy");
-     }
-     else if (age>13 && age<=20 ) {
-       console.log("this is a teen");
-     }
-     else if (age>20 && age<=60) {
-       console.log("this is a man");
-     }
-     else {
-       console.log("this is a old man");
-     }
+      // age<=10? console.log("drinks juice"): console.log("drinks beer");
+      var ans = age <= 10 ? "drinks juice" : "drinks beer";
+      console.log(ans);
 
+      var work = "hello";
+
+      switch (work) {
+        case "driver":
+        case "hello":
+          console.log("he drives a car");
+
+          break;
+        case "teacher":
+          console.log("teaches students");
+          break;
+        case "stud":
+          console.log("studies");
+          break;
+        default:
+          console.log("does nothing");
+          break;
+      }
     </script>
   </body>
 </html>
