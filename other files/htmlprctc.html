@@ -15,24 +15,16 @@
 
     <script>
      
-  
-  
-   var arr=["num",23,23.44,"kj"]
+     function tip(res1,res2,res3) {
+           var tip1=res1*0.2
+           var tip2=res2*0.2
+           var tip3=res3*0.2
+           var arrtip=[tip1,tip2,tip3]
+           return arrtip;
+     }
 
-   console.log(arr);
-   console.log(arr.length);
-   console.log(arr[2]);
-   arr[4]="thus"
-   console.log(arr);
-
-   arr.push("push val")
-   console.log(arr);
-
-   arr.unshift("hello")
-   console.log(arr);
-
-   arr.pop()
-   console.log(arr);
+     var tip=tip(200,300,350)
+     console.log(tip);
 
     </script>
   </body>
