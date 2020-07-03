@@ -10,24 +10,23 @@
 
   <body>
     <h1>
-      practice of JS loops
+      practice of JS hoisting
     </h1>
 
     <script>
        
-       var n=10
-      for (var i = 0; i <= n; i++) {
-        if (i%2===0) {
-          console.log(i);
-        }
-        else{
-          // continue;
-          break
-        }
-        
-        
-      }
+    fun(1997)   
+    function fun(age) {
+    console.log( 2020-age);  
+    }
 
+    fun2(2002)
+ var fun2=function(age){
+   console.log( 2020-age);
+ }
+
+   a=19
+   var a
 
     </script>
   </body>
