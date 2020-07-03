@@ -14,33 +14,25 @@
     </h1>
 
     <script>
-     
-     var newObj={
+
+       var newObj={
        firstname:"chan",
        lastname:"kum",
        age:24,
+       birthyear:1997,
        clg:{
          name:"galgotias",
          address:"greater noida"
        },
-       rupee:[20,30,80]
+       rupee:[20,30,80],
+       calage:function(year){
+         this.age= year- this.birthyear
+       }
 
      }
 
-     console.log(newObj);
-     console.log(newObj.age);
-     console.log(newObj.clg);
-     console.log(newObj.clg.name);
-     console.log(newObj.rupee);
-     console.log(newObj.rupee[2]);
-
-
-
-
-     console.log(newObj["lastname"]);
-     console.log(newObj["clg"].address);
-     console.log(newObj["rupee"][1]);
-
+    console.log(newObj.calage(2020));
+    console.log(newObj);
 
     </script>
   </body>
