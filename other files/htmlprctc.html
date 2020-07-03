@@ -10,30 +10,24 @@
 
   <body>
     <h1>
-      practice of JS objects
+      practice of JS loops
     </h1>
 
     <script>
+       
+       var n=10
+      for (var i = 0; i <= n; i++) {
+        if (i%2===0) {
+          console.log(i);
+        }
+        else{
+          // continue;
+          break
+        }
+        
+        
+      }
 
-       var john={
-         name:"john",
-         height:2,
-         weight:70,
-         bmij:function(){
-            return this.weight/(this.height*this.height)
-         }
-       }
-       var mark={
-         name:"mark",
-         height:2.3,
-         weight:90,
-         bmim:function(){
-            return this.weight/(this.height*this.height)
-         }
-       }
-
-     console.log("john bmi is "+john.bmij());  
-     console.log("mark bmi is "+mark.bmim());  
 
     </script>
   </body>
