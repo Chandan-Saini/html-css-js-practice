@@ -10,21 +10,37 @@
 
   <body>
     <h1>
-      practice of JS array
+      practice of JS objects
     </h1>
 
     <script>
      
-     function tip(res1,res2,res3) {
-           var tip1=res1*0.2
-           var tip2=res2*0.2
-           var tip3=res3*0.2
-           var arrtip=[tip1,tip2,tip3]
-           return arrtip;
+     var newObj={
+       firstname:"chan",
+       lastname:"kum",
+       age:24,
+       clg:{
+         name:"galgotias",
+         address:"greater noida"
+       },
+       rupee:[20,30,80]
+
      }
 
-     var tip=tip(200,300,350)
-     console.log(tip);
+     console.log(newObj);
+     console.log(newObj.age);
+     console.log(newObj.clg);
+     console.log(newObj.clg.name);
+     console.log(newObj.rupee);
+     console.log(newObj.rupee[2]);
+
+
+
+
+     console.log(newObj["lastname"]);
+     console.log(newObj["clg"].address);
+     console.log(newObj["rupee"][1]);
+
 
     </script>
   </body>
