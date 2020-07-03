@@ -15,24 +15,25 @@
 
     <script>
 
-       var newObj={
-       firstname:"chan",
-       lastname:"kum",
-       age:24,
-       birthyear:1997,
-       clg:{
-         name:"galgotias",
-         address:"greater noida"
-       },
-       rupee:[20,30,80],
-       calage:function(year){
-         this.age= year- this.birthyear
+       var john={
+         name:"john",
+         height:2,
+         weight:70,
+         bmij:function(){
+            return this.weight/(this.height*this.height)
+         }
+       }
+       var mark={
+         name:"mark",
+         height:2.3,
+         weight:90,
+         bmim:function(){
+            return this.weight/(this.height*this.height)
+         }
        }
 
-     }
-
-    console.log(newObj.calage(2020));
-    console.log(newObj);
+     console.log("john bmi is "+john.bmij());  
+     console.log("mark bmi is "+mark.bmim());  
 
     </script>
   </body>
