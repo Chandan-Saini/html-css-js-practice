@@ -14,11 +14,18 @@
     </h1>
 
     <script>
+
+
+console.log(this);
+      
+      fun(1997);
+
       function fun(age) {
-        return 2020 - this.age;
+        console.log(2020 - age); 
+        console.log(this);
       }
 
-      console.log(fun(1997));
+      
     </script>
   </body>
 </html>
