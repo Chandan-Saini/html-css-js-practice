@@ -19,13 +19,26 @@
   var john={
     name:"john",
     age:23,
-    objc:function(){
-          console.log(this);
+    byr:function(year){
+          console.log(year-this.age);
+
+          // function fun(){
+          //   console.log(this);
+          // } fun()
     }
   }
 
 
-  john.objc()
+  john.byr(2020)
+
+  var mike={
+    name:"mike",
+    age:29
+  }
+
+  mike.by=john.byr
+
+  mike.by(2010);
       
     </script>
   </body>
