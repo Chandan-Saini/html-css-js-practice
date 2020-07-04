@@ -10,29 +10,15 @@
 
   <body>
     <h1>
-      practice of JS hoisting
+      practice of JS this keyword
     </h1>
 
     <script>
-       var a='hello '
-       fir()
-   function fir(){
-       var b="i am "
-       sec()
+      function fun(age) {
+        return 2020 - this.age;
+      }
 
-       function sec(){
-         var c="chan"
-         console.log(a+b+c);
-         thr()
-       }
-   }
-
-   function thr(){
-     var d="akku"
-    //  console.log(a+c);
-     console.log(a+d);
-   }
-
+      console.log(fun(1997));
     </script>
   </body>
 </html>
