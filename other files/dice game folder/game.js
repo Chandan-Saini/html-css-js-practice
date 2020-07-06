@@ -1,3 +1,4 @@
-document.querySelector(".btn-new").addEventListener("click", function () {
-  this.style.fontSize = "100px";
+document.querySelector(".btn-roll").addEventListener("click", function () {
+    dice = document.querySelector(".dice")
+    dice.src = "dice-1.png";
 });
