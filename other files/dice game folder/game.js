@@ -34,6 +34,7 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
     if (scores[activePlayer]>=20) {
         document.querySelector("#name-" + activePlayer).textContent="Winner!"
         document.querySelector(".player-"+ activePlayer+"-panel").classList.remove("active");
+        document.querySelector(".player-"+ activePlayer+"-panel").classList.add("winner");
         document.querySelector(".dice").style.display = "none";
     }else{
         nextPlayer()
@@ -60,3 +61,5 @@ function nextPlayer() {
   document.querySelector(".player-0-panel").classList.toggle("active");
   document.querySelector(".player-1-panel").classList.toggle("active");
 }
+
+// document.querySelector(".btn-new").style.display="block"
