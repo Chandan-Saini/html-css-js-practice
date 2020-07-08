@@ -169,6 +169,17 @@ i {
 .btn-hold {
   top: 467px;
 }
+/* .btn-rule {
+  top: 200px;
+} */
+
+p{
+  display: none;
+}
+
+button:hover p{
+   display: block;
+}
 
 #dice-1{
   top:120px ;
