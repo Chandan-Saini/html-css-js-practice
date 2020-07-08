@@ -10,36 +10,19 @@
 
   <body>
     <h1>
-      practice of JS this keyword
+      practice of JS constructors
     </h1>
 
     <script>
 
+var Person= function(name,age,dob){
+   this.name=name
+   this.age=age
+   this.dob=dob
+}
 
-  var john={
-    name:"john",
-    age:23,
-    byr:function(year){
-          console.log(year-this.age);
-
-          // function fun(){
-          //   console.log(this);
-          // } fun()
-    }
-  }
-
-
-  john.byr(2020)
-
-  var mike={
-    name:"mike",
-    age:29
-  }
-
-  mike.by=john.byr
-
-  mike.by(2010);
-      
+var john = new Person("john", 23, "12/2/2000")
+      console.log(john);
     </script>
   </body>
 </html>
