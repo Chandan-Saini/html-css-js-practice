@@ -138,15 +138,15 @@ i {
   color: #eb4d4d;
   display: inline-block;
   margin-right: 15px;
-  font-size: 32px;
+  font-size: 25px;
   line-height: 1;
   vertical-align: text-top;
-  margin-top: -4px;
+  margin-top: -1px;
   transition: margin 0.3s;
 }
 
 .btn-new {
-  top: 105px;
+  top: 60px;
 }
 .btn-roll {
   top: 403px;
