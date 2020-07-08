@@ -1,37 +1,45 @@
-var scores, roundScore, activePlayer, dice;
+var scores, roundScore, activePlayer, dice, gamePlaying;
 
 init()
 
 document.querySelector(".btn-roll").addEventListener("click", function () {
-  var dice = Math.floor(Math.random() * 6) + 1;
-  var diceDOM = document.querySelector(".dice");
-  diceDOM.style.display = "block";
-  diceDOM.src = "dice-" + dice + ".png";
 
-  if (dice !== 1) {
-    roundScore += dice;
-    document.getElementById("current-" + activePlayer).textContent = roundScore;
-  } else {
-    nextPlayer();
+  if (gamePlaying) {
+    var dice = Math.floor(Math.random() * 6) + 1;
+    var diceDOM = document.querySelector(".dice");
+    diceDOM.style.display = "block";
+    diceDOM.src = "dice-" + dice + ".png";
+
+    if (dice !== 1) {
+      roundScore += dice;
+      document.getElementById("current-" + activePlayer).textContent = roundScore;
+    } else {
+      nextPlayer();
+    }
   }
+  
 });
 
 
 
 document.querySelector(".btn-hold").addEventListener("click", function () {
-    scores[activePlayer] += roundScore
+   if (gamePlaying) {
+     
+     scores[activePlayer] += roundScore
 
-    document.getElementById("score-" + activePlayer).textContent = scores[activePlayer] 
+     document.getElementById("score-" + activePlayer).textContent = scores[activePlayer]
 
-    if (scores[activePlayer]>=20) {
-        document.querySelector("#name-" + activePlayer).textContent="Winner!"
-        document.querySelector(".player-"+ activePlayer+"-panel").classList.remove("active");
-        document.querySelector(".player-"+ activePlayer+"-panel").classList.add("winner");
-        document.querySelector(".dice").style.display = "none";
-    }else{
-        nextPlayer()
-    }
-    
+     if (scores[activePlayer] >= 20) {
+       document.querySelector("#name-" + activePlayer).textContent = "Winner!"
+       document.querySelector(".player-" + activePlayer + "-panel").classList.remove("active");
+       document.querySelector(".player-" + activePlayer + "-panel").classList.add("winner");
+       document.querySelector(".dice").style.display = "none";
+       gamePlaying = false
+     } else {
+       nextPlayer()
+     }
+
+   }
      
 })
 
