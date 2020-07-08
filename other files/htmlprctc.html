@@ -15,14 +15,36 @@
 
     <script>
 
-var Person= function(name,age,dob){
+var Person= function(name,job,dob){
    this.name=name
-   this.age=age
+   this.job=job
    this.dob=dob
+  
 }
 
-var john = new Person("john", 23, "12/2/2000")
-      console.log(john);
-    </script>
+Person.prototype.age=function(){
+     console.log(2020- this.dob); 
+   }
+
+   Person.prototype.lastName=function(){
+     console.log("smith");
+   }
+
+var john = new Person("john", "driver", 2001)
+
+
+var mike = new Person("mike", "stu", 1996)
+
+var julia = new Person("julia", "eng", 2011)
+
+john.age();
+mike.age();
+julia.age();
+
+julia.lastName()
+john.lastName()
+mike.lastName()
+
+</script>
   </body>
 </html>
