@@ -161,7 +161,7 @@ i {
 }
 
 .btn-new {
-  top: 60px;
+  top: 80px;
 }
 .btn-roll {
   top: 403px;
@@ -169,16 +169,29 @@ i {
 .btn-hold {
   top: 467px;
 }
-/* .btn-rule {
-  top: 200px;
-} */
 
-p{
+
+ p{
   display: none;
+ 
 }
 
-button:hover p{
-   display: block;
+
+.rules:hover p{
+   display: inline-block;
+   position: absolute;
+   width: 267px;
+   color: white;
+   left: 0%;
+   top: 50px;
+   border: 1px solid black;
+   border-radius: 5px;
+   background-color: #eb4d4d;
+   padding: 10px;
+}
+
+.rules button{
+  top: 10%;
 }
 
 #dice-1{
