@@ -10,21 +10,21 @@
 
   <body>
     <h1>
-      practice of JS functions IIFE
+      practice of JS functions clousers
     </h1>
 
     <script>
+     
+     function retage(reage){
+       var a=" years has left for retirement"
+       return function(age){
+        console.log(reage-age + a);
+       }
+     }
 
-     (function(){
-       var score= Math.random()*10;
-       console.log(score >= 5);
-     })();
-
-     (function(luck){
-       var score= Math.random()*10;
-       console.log(score >= 5- luck);
-     })(2)
-
+     retage(65)(57)
+     retage(60)(48)
+     
     </script>
   </body>
 </html>
