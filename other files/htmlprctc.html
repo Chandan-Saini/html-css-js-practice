@@ -10,35 +10,20 @@
 
   <body>
     <h1>
-      practice of JS functions 
+      practice of JS functions IIFE
     </h1>
 
     <script>
 
-   function askqstn(job) {
-       if (job==="teacher") {
-         return function(name){
-           console.log("how to teach students " + name);
-         }
-       }     
-       else if (job==="designer") {
-         return function(name){
-           console.log("what is UX design " + name);
-         }
-       }     
-       else {
-         return function(name){
-           console.log(" what is you job " + name);
-         }
-       }     
-   }
+     (function(){
+       var score= Math.random()*10;
+       console.log(score >= 5);
+     })();
 
-   askqstn("teacher")("chandan")
-   askqstn("designer")("akash")
-   askqstn("no")("akash")
-
-   var tech= askqstn("teacher")
-     tech("jane")
+     (function(luck){
+       var score= Math.random()*10;
+       console.log(score >= 5- luck);
+     })(2)
 
     </script>
   </body>
