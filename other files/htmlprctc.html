@@ -15,30 +15,31 @@
 
     <script>
 
-     var years=[2017,1996,1991,1899,1567]
+   function askqstn(job) {
+       if (job==="teacher") {
+         return function(name){
+           console.log("how to teach students " + name);
+         }
+       }     
+       else if (job==="designer") {
+         return function(name){
+           console.log("what is UX design " + name);
+         }
+       }     
+       else {
+         return function(name){
+           console.log(" what is you job " + name);
+         }
+       }     
+   }
 
-     function cal(arr,fun){
-       var arrfn=[]
-       for(var i=0; i<arr.length; i++){
-          arrfn.push(fun(arr[i]))
-       }
-       return arrfn
-     }
+   askqstn("teacher")("chandan")
+   askqstn("designer")("akash")
+   askqstn("no")("akash")
 
-    function age(el) {
-      return 2020- el
-    }
+   var tech= askqstn("teacher")
+     tech("jane")
 
-    function is18(el) {
-      return el >= 18
-    }
-    
-    var v1= cal(years,age)
-
-    var v2= cal(v1,is18)
-
-    console.log(v1);
-    console.log(v2);
     </script>
   </body>
 </html>
