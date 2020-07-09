@@ -16,27 +16,21 @@
    
     <script>
 
-       var personproto={
-       age:function(){
- console.log(2020 - this.dob);
-      }
-    }
+       var a=10
+       var b=a
+       a=20
+       console.log(a,b);
 
-//way 1
-var john = Object.create(personproto)
+       var obj1={
+         name:"chan"
+       }
 
-john.name="john"
-john.dob=1998
-john.job="stu"
-console.log(john.age());
+       var obj2=obj1
 
-//way 2
-var jane= Object.create(personproto,{
-  name:{value:"jane"},
-  dob:{value:1990},
-  work:{value:"designer"}
-}) 
+       obj1.name="aka"
 
+       console.log(obj1);
+       console.log(obj2);
 
 
 </script>
