@@ -10,40 +10,28 @@
 
   <body>
     <h1>
-      practice of JS object.create
+      practice of JS functions 
     </h1>
 
-   
     <script>
 
-       var a=10
-       var b=a
-       a=20
-       console.log(a,b);
+     var years=[2017,1996,1991,1899,1567]
 
-       var obj1={
-         name:"chan"
+     function cal(arr,fun){
+       var arrfn=[]
+       for(var i=0; i<arr.length; i++){
+          arrfn.push(fun(arr[i]))
        }
+       return arrfn
+     }
 
-       var obj2=obj1
+    function age(el) {
+      return 2020- el
+    }
+    
+    var v1= cal(years,age)
 
-       obj1.name="aka"
-
-       console.log(obj1);
-       console.log(obj2);
-
-       var lname="kuma"
-       var obj3={
-         city:"ind"
-       }
-
-       function change(a,b){
-         a="kansal"
-         b.city="delhi"
-       }
-       change(lname,obj3)
-       console.log(lname);
-       console.log(obj3.city);
-</script>
+    console.log(v1);
+    </script>
   </body>
 </html>
