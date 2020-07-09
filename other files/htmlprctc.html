@@ -28,10 +28,17 @@
     function age(el) {
       return 2020- el
     }
+
+    function is18(el) {
+      return el >= 18
+    }
     
     var v1= cal(years,age)
 
+    var v2= cal(v1,is18)
+
     console.log(v1);
+    console.log(v2);
     </script>
   </body>
 </html>
