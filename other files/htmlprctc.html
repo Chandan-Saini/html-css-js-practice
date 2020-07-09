@@ -10,50 +10,34 @@
 
   <body>
     <h1>
-      practice of JS constructors
+      practice of JS object.create
     </h1>
 
+   
     <script>
 
-var Person= function(name,job,dob){
-   this.name=name
-   this.job=job
-   this.dob=dob
-  
-}
+       var personproto={
+       age:function(){
+ console.log(2020 - this.dob);
+      }
+    }
 
-Person.prototype.age=function(){
-     console.log(2020- this.dob); 
-   }
+//way 1
+var john = Object.create(personproto)
 
-   Person.prototype.lastName=function(){
-     console.log("smith");
-   }
+john.name="john"
+john.dob=1998
+john.job="stu"
+console.log(john.age());
 
-var john = new Person("john", "driver", 2001)
+//way 2
+var jane= Object.create(personproto,{
+  name:{value:"jane"},
+  dob:{value:1990},
+  work:{value:"designer"}
+}) 
 
 
-var mike = new Person("mike", "stu", 1996)
-
-var julia = new Person("julia", "eng", 2011)
-
-john.age();
-mike.age();
-julia.age();
-
-julia.lastName()
-john.lastName()
-mike.lastName()
-
-console.log(Person);
-console.log(john);
-console.log(john.hasOwnProperty("age"));
-console.log(john.hasOwnProperty("dob"));
-
-var x=[2,3,4]
-
-console.log(x);
-console.log(x.length);
 
 </script>
   </body>
