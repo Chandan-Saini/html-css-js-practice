@@ -38,10 +38,19 @@
      job:"stud"
    }
 
+   var chan={
+     name:"chan",
+     age:40,
+     job:"eng"
+   }
+
     john.pres.call(jane,"friendly","morng")
 
     // john.pres.apply(jane,["formal","afternoon"])
 
+    var chanfor=john.pres.bind(chan,"formal")
+    chanfor("evening")
+    chanfor("afternoon")
     </script>
   </body>
 </html>
