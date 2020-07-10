@@ -10,47 +10,19 @@
 
   <body>
     <h1>
-      practice of JS call bind and apply 
+      practice of JS challenge 7
     </h1>
 
     <script>
      
-     var john ={
-       name:"john",
-       age:26,
-       job:"teacher",
-       pres: function(style,time){
-         if (style==="formal") {
-           console.log("good "+ time+" my name is " + this.name+" my age is "+this.age+" i works as "+this.job);
-         }
-        else if (style==="friendly") {
-           console.log("have a nice "+ time+" my name is " + this.name+" my age is "+this.age+" i works as "+this.job);
-         }
-       }
+     function question(a){
+         
+      if(a===1){
+        prompt("answer is corect")
+      }
      }
+   
 
-
-     john.pres("friendly","morng")
-     
-   var jane={
-     name:"jane",
-     age:18,
-     job:"stud"
-   }
-
-   var chan={
-     name:"chan",
-     age:40,
-     job:"eng"
-   }
-
-    john.pres.call(jane,"friendly","morng")
-
-    // john.pres.apply(jane,["formal","afternoon"])
-
-    var chanfor=john.pres.bind(chan,"formal")
-    chanfor("evening")
-    chanfor("afternoon")
     </script>
   </body>
 </html>
