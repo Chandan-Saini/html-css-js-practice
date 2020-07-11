@@ -14,6 +14,10 @@
     </h1>
 
     <script>
+
+    
+    (function(){
+
       function Question(question, answer, correctAns) {
         this.question = question;
         this.answer = answer;
@@ -28,20 +32,29 @@
         }
       }
 
+      Question.prototype.showAns= function(inputAns){
+
+        if (this.correctAns===inputAns) {
+           console.log("Your Answer is Correct");
+        }
+        else
+         console.log("Wrong Answer, Try again!");
+      }
+
       var q1 = new Question(
-        "What is the capital of India",
+        "What is the capital of India?",
         ["mumbai", "delhi", "uttar pradesh"],
         1
       );
 
       var q2 = new Question(
-        "Sun rises from which direction",
+        "Sun rises from which direction?",
         ["north", "west", "east", "south"],
         2
       );
 
       var q3 = new Question(
-        "How many players allowed in cricket from one team",
+        "How many players allowed in cricket from one team?",
         [9, 11, 15, 10, 6],
         1
       );
@@ -51,7 +64,14 @@
       var n= Math.floor(Math.random() * questions.length)
 
       questions[n].showQstn()
+      
+      var inputAns= parseInt(prompt("Enter Your Answer Here"))
 
+      questions[n].showAns(inputAns)
+
+    })()
+     
+      
     </script>
   </body>
 </html>
