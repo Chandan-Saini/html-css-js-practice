@@ -14,18 +14,44 @@
     </h1>
 
     <script>
-     
-     function question(question,answer,correctAns){
-         this.question=question
-         this.answer=answer
-         this.correctAns=correctAns
-       }
+      function Question(question, answer, correctAns) {
+        this.question = question;
+        this.answer = answer;
+        this.correctAns = correctAns;
+      }
 
-    var q1= new question("What is the capital of India", ['mumbai','delhi','uttar pradesh'],1)
+      Question.prototype.showQstn= function(){
+        console.log(this.question);
 
-    var q2= new question("Sun rises from which direction",['north','west','east','south'],2)
-   
-     var q3= new question("How many players allowed in cricket from one team",[9,11,15,10,6],1)
+        for( var i=0; i<this.answer.length;i++){
+          console.log(i+": "+ this.answer[i]);
+        }
+      }
+
+      var q1 = new Question(
+        "What is the capital of India",
+        ["mumbai", "delhi", "uttar pradesh"],
+        1
+      );
+
+      var q2 = new Question(
+        "Sun rises from which direction",
+        ["north", "west", "east", "south"],
+        2
+      );
+
+      var q3 = new Question(
+        "How many players allowed in cricket from one team",
+        [9, 11, 15, 10, 6],
+        1
+      );
+
+      var questions=[q1,q2,q3]
+
+      var n= Math.floor(Math.random() * questions.length)
+
+      questions[n].showQstn()
+
     </script>
   </body>
 </html>
