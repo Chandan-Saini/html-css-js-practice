@@ -1,34 +1,19 @@
+var budgetController = (function () {})();
 
-var budgetController= (function () {
-    var x= 23
+var UIcontroller = (function () {})();
 
-    function add(a) {
-        return a+x
+var controller = (function (budgcntrl, UIcntrl) {
+  function keyPress() {
+    console.log("Yes it works");
+  }
+
+  document.querySelector(".add__btn").addEventListener("click", keyPress);
+
+  document.addEventListener("keypress", function (event) {
+    if (event.keyCode === 13 || event.which === 13) {
+      keyPress();
     }
-
-    return {
-        publicTest: function (b) {
-            return add(b)
-        }
-    }
-})()
+  });
+})(budgetController, UIcontroller);
 
 
-console.log(budgetController.publicTest(20));
-
-var UIcontroller= (function () {
-    
-})()
-
-
-var controller= (function (budgcntrl,UIcntrl) {
-    var z = budgcntrl.publicTest(34)
-
-    return {
-        otherPublic: function () {
-            console.log(z);
-        }
-    }
-})(budgetController,UIcontroller)
-
-controller.otherPublic()
