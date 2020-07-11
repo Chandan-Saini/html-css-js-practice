@@ -39,6 +39,12 @@
         }
         else
          console.log("Wrong Answer, Try again!");
+          
+          var n= Math.floor(Math.random() * questions.length)
+         questions[n].showQstn()
+         var inputAns= parseInt(prompt("Enter Your Answer Here"))
+
+      questions[n].showAns(inputAns)
       }
 
       var q1 = new Question(
