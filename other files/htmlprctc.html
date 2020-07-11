@@ -40,11 +40,6 @@
         else
          console.log("Wrong Answer, Try again!");
           
-          var n= Math.floor(Math.random() * questions.length)
-         questions[n].showQstn()
-         var inputAns= parseInt(prompt("Enter Your Answer Here"))
-
-      questions[n].showAns(inputAns)
       }
 
       var q1 = new Question(
@@ -67,14 +62,22 @@
 
       var questions=[q1,q2,q3]
 
-      var n= Math.floor(Math.random() * questions.length)
+      function loopQstn(){
+        var n= Math.floor(Math.random() * questions.length)
 
       questions[n].showQstn()
       
-      var inputAns= parseInt(prompt("Enter Your Answer Here"))
+      var inputAns= prompt("Enter Your Answer Here OR To close the game enter \"exit\"")
 
-      questions[n].showAns(inputAns)
+     
+            if (inputAns!=="exit") {
+                 questions[n].showAns(parseInt(inputAns))
 
+                loopQstn()
+            }
+      }
+        
+        loopQstn()
     })()
      
       
