@@ -14,73 +14,92 @@
     </h1>
 
     <script>
-
-    
-    (function(){
-
-      function Question(question, answer, correctAns) {
-        this.question = question;
-        this.answer = answer;
-        this.correctAns = correctAns;
-      }
-
-      Question.prototype.showQstn= function(){
-        console.log(this.question);
-
-        for( var i=0; i<this.answer.length;i++){
-          console.log(i+": "+ this.answer[i]);
+      (function () {
+        function Question(question, answer, correctAns) {
+          this.question = question;
+          this.answer = answer;
+          this.correctAns = correctAns;
         }
-      }
 
-      Question.prototype.showAns= function(inputAns){
+        Question.prototype.showQstn = function () {
+          console.log(this.question);
 
-        if (this.correctAns===inputAns) {
-           console.log("Your Answer is Correct");
-        }
-        else
-         console.log("Wrong Answer, Try again!");
-          
-      }
+          for (var i = 0; i < this.answer.length; i++) {
+            console.log(i + ": " + this.answer[i]);
+          }
+        };
 
-      var q1 = new Question(
-        "What is the capital of India?",
-        ["mumbai", "delhi", "uttar pradesh"],
-        1
-      );
+        Question.prototype.showAns = function (inputAns, callBackScore) {
+          var sc;
+          if (this.correctAns === inputAns) {
+            console.log("Your Answer is Correct");
+            sc = callBackScore(true);
+          } else {
+            console.log("Wrong Answer, Try again!");
+            sc = callBackScore(false);
+          }
 
-      var q2 = new Question(
-        "Sun rises from which direction?",
-        ["north", "west", "east", "south"],
-        2
-      );
+          this.displayScore(sc);
+        };
 
-      var q3 = new Question(
-        "How many players allowed in cricket from one team?",
-        [9, 11, 15, 10, 6],
-        1
-      );
+        Question.prototype.displayScore = function (score) {
+          console.log("Your current score is: " + score);
+          console.log(
+            "---------------------------------------------------------------------"
+          );
+        };
 
-      var questions=[q1,q2,q3]
+        var q1 = new Question(
+          "What is the capital of India?",
+          ["mumbai", "delhi", "uttar pradesh"],
+          1
+        );
 
-      function loopQstn(){
-        var n= Math.floor(Math.random() * questions.length)
+        var q2 = new Question(
+          "Sun rises from which direction?",
+          ["north", "west", "east", "south"],
+          2
+        );
 
-      questions[n].showQstn()
-      
-      var inputAns= prompt("Enter Your Answer Here OR To close the game enter \"exit\"")
+        var q3 = new Question(
+          "How many players allowed in cricket from one team?",
+          [9, 11, 15, 10, 6],
+          1
+        );
 
-     
-            if (inputAns!=="exit") {
-                 questions[n].showAns(parseInt(inputAns))
+        var questions = [q1, q2, q3];
 
-                loopQstn()
+        function keepScore(correct) {
+          var sc=0;
+          return function (correct) {
+            if (correct) {
+              sc++;
             }
-      }
         
-        loopQstn()
-    })()
-     
-      
+            return sc;
+          };
+        }
+
+        var score = keepScore();
+
+        function loopQstn() {
+          var n = Math.floor(Math.random() * questions.length);
+
+          questions[n].showQstn();
+
+          var inputAns = prompt(
+            'Enter Your Answer Here OR To close the game enter "exit"'
+          );
+
+          if (inputAns !== "exit") {
+            questions[n].showAns(parseInt(inputAns), score);
+
+            loopQstn()
+          }
+        }
+
+        loopQstn();
+      })();
     </script>
   </body>
 </html>
