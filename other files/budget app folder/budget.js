@@ -23,6 +23,16 @@ var budgetController = (function () {
     }
   }
 
+  return {
+
+    addItems: function (type,des,val) {
+        
+       var item= data.allItems[type].push()
+
+       return item
+    }
+  }
+
 })();
 
 
