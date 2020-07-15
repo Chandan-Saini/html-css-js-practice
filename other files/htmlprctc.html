@@ -26,21 +26,36 @@
     <script>
    
    //ES5
-   var box5={
+  //  var box5={
+  //    color:"green",
+  //    position:1,
+  //    clickMe: function(){
+  //      var self= this
+  //      document.querySelector(".green").addEventListener("click", function(){
+  //        var str= "this is box no "+self.position   +"and it is"+ self.color //if we will write here this.color then it will not work because this is a function and in function this keyword points to window object, so to access color we need to use this like this only
+  //        alert(str)
+  //      })
+  //    }
+  //  }
+
+  //  box5.clickMe()
+
+
+
+   //ES6
+
+    const box6={
      color:"green",
      position:1,
      clickMe: function(){
-       var self= this
-       document.querySelector(".green").addEventListener("click", function(){
-         var str= "this is box no "+self.position   +"and it is"+ self.color //if we will write here this.color then it will not work because this is a function and in function this keyword points to window object, so to access color we need to use this like this only
+       document.querySelector(".green").addEventListener("click", ()=>{
+         const str= "this is box no "+this.position   +"and it is"+ this.color
          alert(str)
        })
      }
    }
 
-   box5.clickMe()
-
-   //ES6
+   box6.clickMe()
     
 
     </script>
