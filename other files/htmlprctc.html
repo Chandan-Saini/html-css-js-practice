@@ -5,40 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>udemy JS practice</title>
 
-    <style></style>
+    <style>
+      .green{
+        width: 300px;
+        height: 100px;
+        background-color: green;
+      }
+    </style>
   </head>
 
   <body>
     <h1>
       practice of ES6 JS arrow function
     </h1>
+
+    <div class="green">
+      This is green box
+    </div>
  
     <script>
    
    //ES5
-   var years= [1884,1993,2001]
+   var box5={
+     color:"green",
+     position:1,
+     clickMe: function(){
+       var self= this
+       document.querySelector(".green").addEventListener("click", function(){
+         var str= "this is box no "+self.position   +"and it is"+ self.color //if we will write here this.color then it will not work because this is a function and in function this keyword points to window object, so to access color we need to use this like this only
+         alert(str)
+       })
+     }
+   }
 
-   var fun5= years.map(function(el){
-        return 2020-el
-   })
-
-   console.log(fun5);
+   box5.clickMe()
 
    //ES6
-    let fun6= years.map(el => 2018 - el )
-    console.log(fun6);
-
-    fun6= years.map((el,index)=>
-    `this is val at index ${index+1} : ${el}`)
-     console.log(fun6);
-
-    fun6= years.map((el,index)=>{
-      const now= new Date().getFullYear()
-      const yrr= now - el
-
-      return `these are years at ${index} : ${yrr}`
-    })
-    console.log(fun6);
+    
 
     </script>
   </body>
