@@ -47,7 +47,7 @@
     const box6={
      color:"green",
      position:1,
-     clickMe: function(){
+     clickMe: ()=>{ // this code will not work because this arrow is pointing to window then inner arrow follows outer arrow so it will also point to window and window dont have color and position objects
        document.querySelector(".green").addEventListener("click", ()=>{
          const str= "this is box no "+this.position   +"and it is"+ this.color
          alert(str)
