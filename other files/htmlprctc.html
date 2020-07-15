@@ -10,27 +10,36 @@
 
   <body>
     <h1>
-      practice of ES6 JS strings
+      practice of ES6 JS arrow function
     </h1>
  
     <script>
    
-    let name= "chandan"
-    const age= 20
+   //ES5
+   var years= [1884,1993,2001]
 
-    //ES5
-    console.log("My name is " + name +"and age is " + age);
-     
-    //ES6
-    console.log(`My name is ${name} and age is ${age}`);
-    
-    const n = `${name}`
+   var fun5= years.map(function(el){
+        return 2020-el
+   })
 
-    console.log(n.startsWith("c"));
-    console.log(n.endsWith("c"));
-    console.log(n.includes("an"));
+   console.log(fun5);
 
-    console.log(n.repeat(5));
+   //ES6
+    let fun6= years.map(el => 2018 - el )
+    console.log(fun6);
+
+    fun6= years.map((el,index)=>
+    `this is val at index ${index+1} : ${el}`)
+     console.log(fun6);
+
+    fun6= years.map((el,index)=>{
+      const now= new Date().getFullYear()
+      const yrr= now - el
+
+      return `these are years at ${index} : ${yrr}`
+    })
+    console.log(fun6);
+
     </script>
   </body>
 </html>
