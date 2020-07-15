@@ -10,24 +10,27 @@
 
   <body>
     <h1>
-      practice of JS new IIFE with block
+      practice of ES6 JS strings
     </h1>
  
     <script>
-    //IIFE in ES6
-    {
-      let a=10
-      const b=20
-    }
+   
+    let name= "chandan"
+    const age= 20
 
-    console.log(a,b);
-
-
-    //IIFE in ES5
-    (function(){
-
-    })()
+    //ES5
+    console.log("My name is " + name +"and age is " + age);
      
+    //ES6
+    console.log(`My name is ${name} and age is ${age}`);
+    
+    const n = `${name}`
+
+    console.log(n.startsWith("c"));
+    console.log(n.endsWith("c"));
+    console.log(n.includes("an"));
+
+    console.log(n.repeat(5));
     </script>
   </body>
 </html>
