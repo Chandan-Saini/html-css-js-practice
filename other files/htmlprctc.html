@@ -10,96 +10,18 @@
 
   <body>
     <h1>
-      practice of JS challenge 7
+      practice of JS LET and const
     </h1>
 
     <script>
-      (function () {
-        function Question(question, answer, correctAns) {
-          this.question = question;
-          this.answer = answer;
-          this.correctAns = correctAns;
-        }
+      var name5= "chan"
+      var age5=10
+      console.log(name5,age5);
 
-        Question.prototype.showQstn = function () {
-          console.log(this.question);
-
-          for (var i = 0; i < this.answer.length; i++) {
-            console.log(i + ": " + this.answer[i]);
-          }
-        };
-
-        Question.prototype.showAns = function (inputAns, callBackScore) {
-          var sc;
-          if (this.correctAns === inputAns) {
-            console.log("Your Answer is Correct");
-            sc = callBackScore(true);
-          } else {
-            console.log("Wrong Answer, Try again!");
-            sc = callBackScore(false);
-          }
-
-          this.displayScore(sc);
-        };
-
-        Question.prototype.displayScore = function (score) {
-          console.log("Your current score is: " + score);
-          console.log(
-            "---------------------------------------------------------------------"
-          );
-        };
-
-        var q1 = new Question(
-          "What is the capital of India?",
-          ["mumbai", "delhi", "uttar pradesh"],
-          1
-        );
-
-        var q2 = new Question(
-          "Sun rises from which direction?",
-          ["north", "west", "east", "south"],
-          2
-        );
-
-        var q3 = new Question(
-          "How many players allowed in cricket from one team?",
-          [9, 11, 15, 10, 6],
-          1
-        );
-
-        var questions = [q1, q2, q3];
-
-        function keepScore(correct) {
-          var sc=0;
-          return function (correct) {
-            if (correct) {
-              sc++;
-            }
-        
-            return sc;
-          };
-        }
-
-        var score = keepScore();
-
-        function loopQstn() {
-          var n = Math.floor(Math.random() * questions.length);
-
-          questions[n].showQstn();
-
-          var inputAns = prompt(
-            'Enter Your Answer Here OR To close the game enter "exit"'
-          );
-
-          if (inputAns !== "exit") {
-            questions[n].showAns(parseInt(inputAns), score);
-
-            loopQstn()
-          }
-        }
-
-        loopQstn();
-      })();
+      const name6=" chan"
+      let age6=23
+       console.log(age6);
+      name6="chandan"
     </script>
   </body>
 </html>
