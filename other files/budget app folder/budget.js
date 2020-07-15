@@ -153,6 +153,7 @@ var UIcontroller = (function () {
   };
 
   var nodeListForEach = function (list, callback) {
+    //this is our own forEach function made to works with lists and can help to apply array methods on it ,without any hack that we used earlier
     for (var i = 0; i < list.length; i++) {
       callback(list[i], i);
     }
@@ -178,11 +179,11 @@ var UIcontroller = (function () {
           '<div class="item clearfix" id="exp-%id%""><div div class="item__description" > %description%</div ><div class="right clearfix"><div class="item__value"> %value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div >';
       }
 
-      newHtml = html.replace("%id%", obj.id);
+      newHtml = html.replace("%id%", obj.id); //this is used to replace strings in upper html strings
       newHtml = newHtml.replace("%description%", obj.description);
       newHtml = newHtml.replace("%value%", formatNumber(obj.value, type));
 
-      document.querySelector(element).insertAdjacentHTML("beforeend", newHtml);
+      document.querySelector(element).insertAdjacentHTML("beforeend", newHtml); //this tells where to show the replaced strings in html DOM
     },
 
     clearFields: function () {
@@ -274,11 +275,11 @@ var UIcontroller = (function () {
           DOMstrings.inputValue
       );
 
-      nodeListForEach(fields,function(cur) {
-          cur.classList.toggle("red-focus")
-      })
+      nodeListForEach(fields, function (cur) {
+        cur.classList.toggle("red-focus");
+      });
 
-      document.querySelector(DOMstrings.inputBtn).classList.toggle("red")
+      document.querySelector(DOMstrings.inputBtn).classList.toggle("red");
     },
 
     getDOMstrings: function () {
@@ -345,7 +346,7 @@ var controller = (function (budgetCtrl, UICtrl) {
 
   var ctrlDeleteItem = function (event) {
     var itemID;
-    itemID = event.target.parentNode.parentNode.parentNode.parentNode.id;
+    itemID = event.target.parentNode.parentNode.parentNode.parentNode.id; //it selects the element where event occurs and then selects the its partent's parent's parent .....
 
     if (itemID) {
       splitID = itemID.split("-");
