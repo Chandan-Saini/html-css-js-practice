@@ -37,26 +37,53 @@
     <script>
    
 
-   //ES5
+  //  //ES5
 
-   function isFullAge5(){
-     var arr= Array.prototype.slice.call(arguments)
+  //  function isFullAge5(){
+  //    var arr= Array.prototype.slice.call(arguments)
+
+  //    arr.forEach(function(el) {
+  //       console.log( 2020 - el >= 18);
+  //    });
+  //  }
+  
+  // // isFullAge5(1990,2013,1996)
+  // // isFullAge5(1980,2033,1998,2020)
+  
+
+  //  //ES6
+  //   function isFullAge6(...arr){
+  //     arr.forEach(el=> console.log((2020-el)>=18))
+  //   }
+
+  //   isFullAge6(2012,1992,2000,2009)
+
+
+
+
+
+
+
+  //ES5
+   function isFullAge5(limit){
+     var arr= Array.prototype.slice.call(arguments,1) //this 1 means consider val of arguments from position 1 only
 
      arr.forEach(function(el) {
-        console.log( 2020 - el >= 18);
+        console.log( 2020 - el >= limit);
      });
    }
   
-  // isFullAge5(1990,2013,1996)
-  // isFullAge5(1980,2033,1998,2020)
+  //isFullAge5(10,1990,2013,1996) 
+  //we want to take only first arg as limit and slice can help in it
   
 
+
    //ES6
-    function isFullAge6(...arr){
-      arr.forEach(el=> console.log((2020-el)>=18))
+    function isFullAge6(limit,...arr){  // it automaticallty takes first arg as limit
+      arr.forEach(el=> console.log((2020-el)>=limit))
     }
 
-    isFullAge6(2012,1992,2000,2009)
+    isFullAge6(10,2012,1992,2000,2009)
 
     </script>
   </body>
