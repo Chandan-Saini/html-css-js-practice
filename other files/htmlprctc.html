@@ -23,7 +23,7 @@
 
   <body>
     <h1>
-      practice of ES6 JS rest parameters
+      practice of ES6 JS maps
     </h1>
 
     <div class="green">
@@ -38,40 +38,34 @@
    
 
     //ES5
-    function info5(name,age,yearOfBirth,gender){
-      
-      yearOfBirth===undefined?yearOfBirth=2018:yearOfBirth
-
-      gender===undefined?gender="male":gender
-
-      this.name=name
-      this.age=age
-      this.yearOfBirth=yearOfBirth
-      this.gender=gender
-     
-    }
-   var john= new info5("chandan",9)
-   console.log(john);
-
-   var mia=new info5("mia",20,2000,"female")
-   console.log(mia);
+  //es5 don't have maps
 
 
     //ES6
-  function info6(name,age,currentYear=2020,favColor="red"){
-     this.name=name
-      this.age=age
-      this.currentYear=currentYear
-      this.favColor=favColor
-   
-  }
 
-var akash= new info6("akash",24)
-console.log(akash);
+    const question= new Map()
+    question.set("question","What is the latest JS version in the market")
+    question.set(1,"ES5")
+    question.set(2,"ES6")
+    question.set(3,"ES7")
+    question.set(4,"ES2015")
+    question.set(5,"nothing")
+    question.set("correct",1)
+    question.set(true,"Well done")
+    question.set(false,"wrong answer")
 
-var aman= new info6("aman",23,2018,"green")
-console.log(aman);
+    console.log(question);
+    console.log(question.get(4));
+    console.log(question.has("no"));
+    console.log(question.size);
+  
+    if (question.has(5)) {
+      question.delete(5)
+      console.log(question);
+    }
 
+    question.clear()
+    console.log(question);
 
 
 
