@@ -16,7 +16,7 @@
 
   <body>
     <h1>
-      practice of ES6 JS arrow function
+      practice of ES6 JS destructuring 
     </h1>
 
     <div class="green">
@@ -26,35 +26,20 @@
     <script>
    
    //ES5
-   
-   function Person(name){
-     this.name=name
-   }
-   
-   Person.prototype.myFriends5= function(friends){
-      var arr= friends.map(function(el){
-          return this.name +" is friend of " +el 
-      }.bind(this))
-
-      console.log(arr);
-   }
-
-   var friends=["aman","akash","anupam"]
-
-   new Person("John").myFriends5(friends)
+    var array= ["chandan", 20]
+    var name= array[0]
+    var age=array[1]
+    console.log(name,age);
+    //way to take out values from a array in es5
 
 
 
    //ES6
-   
-   Person.prototype.otherFriends= function(friends){
-       var arr= friends.map(el=> `${this.name} has friend ${el}`)
-
-       console.log(arr);
-          }
-   
-  new Person("Akash").otherFriends(friends)
+   const arr= ["akash",23]
+   const [name6,age6]=arr  //destructuting in es6
+   console.log(name6,age6);
     
+
 
     </script>
   </body>
