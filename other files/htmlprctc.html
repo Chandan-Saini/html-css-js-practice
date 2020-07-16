@@ -23,7 +23,7 @@
 
   <body>
     <h1>
-      practice of ES6 JS Arrays 
+      practice of ES6 JS rest parameters
     </h1>
 
     <div class="green">
@@ -36,37 +36,28 @@
  
     <script>
    
-   function add(a,b,c,d){
-     return a+b+c+d
-   }
-   sum1=add(12,23,56,30)
-   console.log(sum1);
 
    //ES5
-   var nums=[12,23,56,30]
-   var sum2= add.apply(null,nums)
-   console.log(sum2);
+
+   function isFullAge5(){
+     var arr= Array.prototype.slice.call(arguments)
+
+     arr.forEach(function(el) {
+        console.log( 2020 - el >= 18);
+     });
+   }
+  
+  // isFullAge5(1990,2013,1996)
+  // isFullAge5(1980,2033,1998,2020)
   
 
    //ES6
-   let sum3= add(...nums)
-console.log(sum3);
+    function isFullAge6(...arr){
+      arr.forEach(el=> console.log((2020-el)>=18))
+    }
 
+    isFullAge6(2012,1992,2000,2009)
 
-// combining arrays using spread operator
-let family1=["aman","chandan",'akash']
-let family2=["aman2","chandan2",'akash2']
-let addfamily= [...family1,"deepanshu",...family2]
-console.log(addfamily);
-   
-
-
-let h1= document.querySelector("h1")
-let div= document.querySelectorAll("div")
-const all=[h1,...div]
-    
-    Array.from(all).forEach(el=>
-    el.style.color="blue")
     </script>
   </body>
 </html>
