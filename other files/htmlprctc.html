@@ -9,6 +9,7 @@
       .green{
         width: 300px;
         height: 100px;
+        margin-top: 30px;
         background-color: green;
       }
     </style>
@@ -16,9 +17,13 @@
 
   <body>
     <h1>
-      practice of ES6 JS destructuring 
+      practice of ES6 JS Arrays 
     </h1>
 
+    <div class="green">
+      This is green box
+    </div>
+ 
     <div class="green">
       This is green box
     </div>
@@ -26,39 +31,21 @@
     <script>
    
    //ES5
-    var array= ["chandan", 20]
-    var name= array[0]
-    var age=array[1]
-    console.log(name,age);
-    //way to take out values from a array in es5
+   var boxes= document.querySelectorAll(".green")
 
+   var box5=Array.prototype.slice.call(boxes)
 
+    box5.forEach(function(el){
+       el.style.backgroundColor="red"
+    })
 
    //ES6
-   const arr= ["akash",23]
-   const [name6,age6]=arr  //destructuting in es6
-   console.log(name6,age6);
-    
 
-   const obj= {
-     nameo: "aman",
-     ageo:22
-   }
-   
-   const {nameo,ageo}=obj
-   console.log(nameo,ageo);
+   const box6= Array.from(boxes)
 
-   const {nameo:nname,ageo:nage}=obj
-   console.log(nname,nage);
+   box6.forEach(el=> el.style.backgroundColor='blue')
 
-    
-    function calcRetAge(year) {
-      const age=new Date().getFullYear()-year
-       return [age,65-age]
-   }
-   
-   var [fage,fRetAge]=calcRetAge(1996)
-   console.log(fage,fRetAge);
+  
     </script>
   </body>
 </html>
