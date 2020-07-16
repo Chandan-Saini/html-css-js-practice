@@ -34,18 +34,26 @@
    Person.prototype.myFriends5= function(friends){
       var arr= friends.map(function(el){
           return this.name +" is friend of " +el 
-      })  //here jonas used '}.bind(this))' this code to make this work but it is working without it dont know why, but can happen because of new versions of ES6.
+      }.bind(this))
 
       console.log(arr);
    }
 
    var friends=["aman","akash","anupam"]
 
-    new Person("John").myFriends5(friends)
+   new Person("John").myFriends5(friends)
+
+
 
    //ES6
-
    
+   Person.prototype.otherFriends= function(friends){
+       var arr= friends.map(el=> `${this.name} has friend ${el}`)
+
+       console.log(arr);
+          }
+   
+  new Person("Akash").otherFriends(friends)
     
 
     </script>
