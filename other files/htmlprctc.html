@@ -36,55 +36,22 @@
  
     <script>
    
+   function add(a,b,c,d){
+     return a+b+c+d
+   }
+   sum1=add(12,23,56,30)
+   console.log(sum1);
+
    //ES5
-   var boxes= document.querySelectorAll("div")
-
-   var box5=Array.prototype.slice.call(boxes)
-
-    box5.forEach(function(el){
-       el.style.backgroundColor="pink"
-    })
-
+   var nums=[12,23,56,30]
+   var sum2= add.apply(null,nums)
+   console.log(sum2);
+  
 
    //ES6
-
-   const box6= Array.from(boxes)
-
-   box6.forEach(el=> el.style.backgroundColor='blue')
-
-
-  //ES5
-  // for(var i=0; i<box5.length; i++){
-  //   if (box5[i].className==="orange") {
-  //     continue
-  //     }
-
-  //     box5[i].style.color="white"
-  // }
-
-  //ES6
-  for(const el of box6){
-     if (el.className.includes("green")) {
-       continue
-     }
-
-     el.style.color= "pink"
-  }
-
-  //ES5
-  var ages=[20,12,18,10,6]
-
-  var full= ages.map(function(cur){
-       return cur >= 18
-  })
-
-  console.log(full);
-console.log(full.indexOf(true)); 
-console.log(ages[full.indexOf(true)]);
-
-//ES6
-console.log(ages.findIndex(cur => cur>= 18));
-console.log(ages.find(cur => cur>= 18));
+   var sum3= add(...nums)
+console.log(sum3);
+   
 
     </script>
   </body>
