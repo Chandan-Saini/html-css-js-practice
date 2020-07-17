@@ -51,24 +51,39 @@
     question.set(4,"ES2015")
     question.set(5,"nothing")
     question.set("correct",1)
-    question.set(true,"Well done")
-    question.set(false,"wrong answer")
+    question.set(true,"Well done! Correct")
+    question.set(false,"wrong answer, try again")
 
-    console.log(question);
-    console.log(question.get(4));
-    console.log(question.has("no"));
-    console.log(question.size);
+    // console.log(question);
+    // console.log(question.get(4));
+    // console.log(question.has("no"));
+    // console.log(question.size);
   
-    if (question.has(5)) {
-      question.delete(5)
-      console.log(question);
+    // if (question.has(5)) {
+    //   question.delete(5)
+    //   console.log(question);
+    // }
+
+    // question.clear()
+    // console.log(question);
+
+
+
+
+    // question.forEach((val,key) => {
+    //   console.log(`this is key: ${key} and this is value: ${val}`);
+    // });
+
+    for(const [key,value] of question.entries()){
+       
+      if (typeof(key)==="number") {
+        console.log(`Option ${key}: ${value}`);
+      }
     }
 
-    question.clear()
-    console.log(question);
-
-
-
+    const ans=parseInt(prompt(question.get("question")))
+    
+    console.log(question.get(ans=== question.get("correct")));
 
     </script>
   </body>
