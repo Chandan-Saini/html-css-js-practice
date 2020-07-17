@@ -23,7 +23,7 @@
 
   <body>
     <h1>
-      practice of ES6 JS maps
+      practice of ES6 JS classes
     </h1>
 
     <div class="green">
@@ -38,52 +38,47 @@
    
 
     //ES5
-  //es5 don't have maps
+  var Person5= function (name,age,dob){
+       this.name=name
+       this.age=age
+       this.dob=dob
+   }
+   
+   Person5.prototype.calcAd= function(year){
+        console.log(year-this.dob);
+   }
+   
+   var chandan5= new Person5("chandan",20,2000)
+   chandan5.calcAd(2020)
+   
+   console.log(chandan5);
+
 
 
     //ES6
 
-    const question= new Map()
-    question.set("question","What is the latest JS version in the market")
-    question.set(1,"ES5")
-    question.set(2,"ES6")
-    question.set(3,"ES7")
-    question.set(4,"ES2015")
-    question.set(5,"nothing")
-    question.set("correct",1)
-    question.set(true,"Well done! Correct")
-    question.set(false,"wrong answer, try again")
+    class Person6{
 
-    // console.log(question);
-    // console.log(question.get(4));
-    // console.log(question.has("no"));
-    // console.log(question.size);
-  
-    // if (question.has(5)) {
-    //   question.delete(5)
-    //   console.log(question);
-    // }
+      constructor(name,age,dob){
+         this.name=name
+       this.age=age
+       this.dob=dob
+      }
 
-    // question.clear()
-    // console.log(question);
+      calcAd(year){
+         console.log(year- this.dob);
+      }
 
-
-
-
-    // question.forEach((val,key) => {
-    //   console.log(`this is key: ${key} and this is value: ${val}`);
-    // });
-
-    for(const [key,value] of question.entries()){
-       
-      if (typeof(key)==="number") {
-        console.log(`Option ${key}: ${value}`);
+      static greetings(){
+        console.log("hello everyone");
       }
     }
 
-    const ans=parseInt(prompt(question.get("question")))
+    var chandan6= new Person6("chandan",20,2000)
+   chandan6.calcAd(2020)
     
-    console.log(question.get(ans=== question.get("correct")));
+    console.log(chandan6);
+     Person6.greetings()
 
     </script>
   </body>
