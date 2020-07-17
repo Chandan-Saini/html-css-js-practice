@@ -23,7 +23,7 @@
 
   <body>
     <h1>
-      practice of ES6 JS classes
+      practice of ES6 JS challenge 8
     </h1>
 
     <div class="green">
@@ -35,117 +35,34 @@
     </div>
  
     <script>
-   
+       
+       class Monuments{
+         constructor(name,buildYear){
+           this.name=name
+           this.buildYear=buildYear
+         }
+       }
 
-    //ES5
-  var Person5= function (name,age,dob){
-       this.name=name
-       this.age=age
-       this.dob=dob
-   }
-   
-   Person5.prototype.calcAd= function(year){
-        console.log(year-this.dob);
-   }
-   
-   var chandan5= new Person5("chandan",20,2000)
-   chandan5.calcAd(2020)
-   
-   console.log(chandan5);
-
-
-
-    //ES6
-
-    class Person6{
-
-      constructor(name,age,dob){
-         this.name=name
-       this.age=age
-       this.dob=dob
+    class Parks extends Monuments{
+       
+      constructor(name,buildYear,noTress,pArea,ageOfPark){
+        super(name,buildYear)
+        this.noTress=noTress
+        this.pArea=pArea
+        this.ageOfPark=ageOfPark
       }
 
-      calcAd(year){
-         console.log(year- this.dob);
+       treeDensity(){
+        return this.noTress/this.pArea;
       }
 
-      static greetings(){
-        console.log("hello everyone");
-      }
+      // averageAgeOfPark(){
+      //   console.log();
+      // }
     }
 
-    var chandan6= new Person6("chandan",20,2000)
-   chandan6.calcAd(2020)
-    
-    console.log(chandan6);
-     Person6.greetings()
-
-
-
-     //Inheritance in ES5
-    var Person5= function (name,age,dob){
-       this.name=name
-       this.age=age
-       this.dob=dob
-   }
-   
-   Person5.prototype.calcAd= function(){
-        console.log(2020-this.dob);
-   }
-   
-    
-   var Athelete5= function(name,age,dob,olympic,medals){
-       Person5.call(this,name,age,dob)
-       this.olympic=olympic
-       this.medals=medals   
-   }
-   
-   Athelete5.prototype=Object.create(Person5.prototype)
-   
-   Athelete5.prototype.sayHello= function(){
-     console.log("hello everyone");
-   }
-
-   var johnAthelete5= new Athelete5("name",23,2000,4,10)
-   console.log(johnAthelete5);
-    johnAthelete5.calcAd();
-    johnAthelete5.sayHello()
-
-
-
-
-    //Inheritance in ES6
-    class Person66{
-
-      constructor(name,age,dob){
-         this.name=name
-       this.age=age
-       this.dob=dob
-      }
-
-      calcAd(){
-         console.log(2020- this.dob);
-      }
-    }
-
-   class Athelete66 extends Person66{
-
-    constructor(name,age,dob,olympic,medals){
-      super(name,age,dob)
-      this.olympic=olympic
-      this.medals=medals
-    }
-
-    sayHello(){
-      console.log("hello guys");
-    }
-
-   }
-
-   var miaAthelete= new Athelete66("mia",19,2010,4,20)
-console.log(miaAthelete);
-miaAthelete.calcAd()
-miaAthelete.sayHello()
+    var greenPark= new Parks("Green Park",1990,5000,500,30)
+    console.log(`${greenPark.name} has a tree density of ${greenPark.treeDensity()} tress per sq km`);
     </script>
   </body>
 </html>
