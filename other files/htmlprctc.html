@@ -80,6 +80,37 @@
     console.log(chandan6);
      Person6.greetings()
 
+
+
+     //Inheritance in ES5
+    var Person5= function (name,age,dob){
+       this.name=name
+       this.age=age
+       this.dob=dob
+   }
+   
+   Person5.prototype.calcAd= function(){
+        console.log(2020-this.dob);
+   }
+   
+    
+   var Athelete5= function(name,age,dob,olympic,medals){
+       Person5.call(this,name,age,dob)
+       this.olympic=olympic
+       this.medals=medals   
+   }
+   
+   Athelete5.prototype=Object.create(Person5.prototype)
+   
+   Athelete5.prototype.sayHello= function(){
+     console.log("hello everyone");
+   }
+
+   var johnAthelete5= new Athelete5("name",23,2000,4,10)
+   console.log(johnAthelete5);
+    johnAthelete5.calcAd();
+    johnAthelete5.sayHello()
+
     </script>
   </body>
 </html>
