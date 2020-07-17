@@ -111,6 +111,41 @@
     johnAthelete5.calcAd();
     johnAthelete5.sayHello()
 
+
+
+
+    //Inheritance in ES6
+    class Person66{
+
+      constructor(name,age,dob){
+         this.name=name
+       this.age=age
+       this.dob=dob
+      }
+
+      calcAd(){
+         console.log(2020- this.dob);
+      }
+    }
+
+   class Athelete66 extends Person66{
+
+    constructor(name,age,dob,olympic,medals){
+      super(name,age,dob)
+      this.olympic=olympic
+      this.medals=medals
+    }
+
+    sayHello(){
+      console.log("hello guys");
+    }
+
+   }
+
+   var miaAthelete= new Athelete66("mia",19,2010,4,20)
+console.log(miaAthelete);
+miaAthelete.calcAd()
+miaAthelete.sayHello()
     </script>
   </body>
 </html>
