@@ -75,16 +75,47 @@
         classification.set(4,"big")
         classification.set(5,"huge")
         console.log(`${this.name} build in year ${this.buildYear} and it is of ${classification.get(this.size)} size`);
-      }
-      
-    }
+      }}
 
      var allpark=[new Parks("Park 1",1991,2,2000),new Parks("Park 2",1910,10,5000),new Parks("Park 3",2010,1.2,500)]
 
      var allstreet=[new Street("street 1",1994,10),new Street("street 2",2011,20,2),new Street("street 3",2020,30,5)]
 
-    allpark.forEach(el => el.treeDensity())
+
+    function calAge(arr){
+        var sum = arr.reduce((prev,cur,index)=> prev+cur,0)
+        return [sum, sum/arr.length]
+    }
+    
+    function reportParks(p){
+         console.log("===================================Parks report======================================");
+         //density
+         allpark.forEach(el => el.treeDensity())
+        
+
+         //avg age
+         var ages= p.map(el => new Date().getFullYear() - el.buildYear)
+
+        const [totalAge,avgAge]=calAge(ages)
+         console.log(`Our ${p.length} has average age of ${avgAge} years`);
+
+
+         //which parks has more than 1000 trees
+         var i= p.map(el=> el.numTress).findIndex(el => el >= 1000)
+               
+               console.log(`${p[i].name} has more than 1000 trees`);
+
+    }
+
+    function reportStreets(s){
+       console.log("=================================Streets report======================================");
     allstreet.forEach(el => el.classifyStreet())
+
+    }
+
+   reportParks(allpark)
+   reportStreets(allstreet)
+
     </script>
   </body>
 </html>
