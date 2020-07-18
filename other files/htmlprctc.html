@@ -36,33 +36,43 @@
  
     <script>
        
-       class Monuments{
+       class Element{
          constructor(name,buildYear){
            this.name=name
            this.buildYear=buildYear
          }
        }
 
-    class Parks extends Monuments{
+    class Parks extends Element{
        
-      constructor(name,buildYear,noTress,pArea,ageOfPark){
+      constructor(name,buildYear,area,numTress){
         super(name,buildYear)
-        this.noTress=noTress
-        this.pArea=pArea
-        this.ageOfPark=ageOfPark
+        this.numTress=numTress
+        this.area=area
       }
 
        treeDensity(){
-        return this.noTress/this.pArea;
+        const density= this.numTress/this.area;
+        console.log(`${this.name} has a tree density of ${density} tress per sq km`);
       }
-
-      // averageAgeOfPark(){
-      //   console.log();
-      // }
     }
 
-    var greenPark= new Parks("Green Park",1990,5000,500,30)
-    console.log(`${greenPark.name} has a tree density of ${greenPark.treeDensity()} tress per sq km`);
+
+     class Street extends Element{
+       
+      constructor(name,buildYear,length,size ){
+        super(name,buildYear)
+        this.length=length
+        this.size=size
+      }
+      
+    }
+
+     var park=[new Parks("Park 1",1991,2,2000),new Parks("Park 2",1910,10,5000),new Parks("Park 3",2010,1.2,500)]
+
+     var street=[new Street("street 1",1994,10,5),new Street("street 2",2011,20,2),new Street("street 3",2020,30,15)]
+
+    park.forEach(el => el.treeDensity())
     </script>
   </body>
 </html>
