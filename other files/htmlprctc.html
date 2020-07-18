@@ -108,9 +108,12 @@
     }
 
     function reportStreets(s){
-       console.log("=================================Streets report======================================");
-    allstreet.forEach(el => el.classifyStreet())
+       console.log("=================================Streets report=====================================");
+      allstreet.forEach(el => el.classifyStreet())
+      
 
+      const [totalLength, avgLength]= calAge(s.map(el => el.length))
+      console.log(`Our streets have total size of ${totalLength}km and average size of ${avgLength}km`);
     }
 
    reportParks(allpark)
