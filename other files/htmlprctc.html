@@ -17,18 +17,28 @@
 
  
     <script>  
+     
+     function getRecipe(){
+         setTimeout(() => {
+           recipeID=[234,546,977,435]
+           console.log(recipeID);
 
-     var funA= ()=> {
-       setTimeout(()=>{console.log("this is timeOut func")},3000)
+           setTimeout((id) => {
+              const recipe={title:"Fresh tomato",publisher:"Jonas"}
+
+              console.log(`${id}: ${recipe.title}`);
+
+              setTimeout(publisher => {
+                const recipe2= {title:"cheese pizza", publisher:"Jonas"}
+                 console.log(recipe2);
+
+              }, 1500, recipe.publisher);
+
+           }, 1500,recipeID[2]);
+         }, 1500);
      }
-
-     var funB= ()=>{
-       console.log("line before calling the Fun A");
-       funA()
-       console.log("this is func after calling B");
-     }
-
-     funB()
+     
+     getRecipe()
        
     </script>
   </body>
