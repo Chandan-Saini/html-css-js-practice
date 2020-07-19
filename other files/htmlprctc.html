@@ -27,8 +27,26 @@
       )
       }
 
-      whetherdata(2487956)
-      whetherdata(44418)
+      // whetherdata(2487956)
+      // whetherdata(44418)
+
+
+
+
+
+      //Same code using async function
+    async function whetherdataWA(placeID) {
+          const result = await fetch(
+             `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${placeID}`
+          )
+
+          const data= await result.json
+          let tomorrow= data.consolidated_weather[1]
+           console.log(`Here is the ${data.title}'s Min Temperature ${tomorrow.min_temp} and Max Temperature ${tomorrow.max_temp}`)
+           return data}
+
+      whetherdataWA(2487956)
+      whetherdataWA(44418)
 
     </script>
   </body>
