@@ -37,6 +37,10 @@
 
       //  getRecipe()
 
+
+
+
+
       // new way to work with Ajax using promises
 
       const getIDs = new Promise((resolve, reject) => {
@@ -46,10 +50,10 @@
         }, 1500);
       });
 
-      const getRecipe = recId => {
+      const getRecipe = (recId) => {
         return new Promise((resolve, reject) => {
           setTimeout(
-            id => {
+            (id) => {
               let recipe = { title: "green pasta", publisher: "chan" };
               resolve(`${id}: ${recipe.title}`);
             },
@@ -59,31 +63,51 @@
         });
       };
 
-      const getPub= pub =>{
-         return new Promise((resolve,reject)=>{
-            setTimeout((pub) => {
-                 let recipe2={title:"chilli chicken",publisher:"chan"}
-                 resolve(`publisher is ${pub}`)
-            }, 1500, pub);
-         })
-
-      }
-
-      getIDs
-        .then((id) => {
-          console.log(id);
-          return getRecipe(id[2]);
-        })
-        .then(res => {
-          console.log(res);
-          return getPub("Chandan")
-        })
-        .then(res=>{
-          console.log(res);
-        })
-        .catch(() => {
-          console.log("some error occured");
+      const getPub = (pub) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(
+            (pub) => {
+              let recipe2 = { title: "chilli chicken", publisher: "chan" };
+              resolve(`publisher is ${pub}`);
+            },
+            1500,
+            pub
+          );
         });
+      };
+
+      // consuming promises
+      // getIDs
+      //   .then((id) => {
+      //     console.log(id);
+      //     return getRecipe(id[2]);
+      //   })
+      //   .then(res => {
+      //     console.log(res);
+      //     return getPub("Chandan")
+      //   })
+      //   .then(res=>{
+      //     console.log(res);
+      //   })
+      //   .catch(() => {
+      //     console.log("some error occured");
+      //   });
+
+
+
+      //consuming promises using Await function
+      async function getRecipeAW() {
+        const getID = await getIDs;
+        console.log(getID);
+
+        const recipe= await getRecipe(getID[2])
+        console.log(recipe);
+
+        const pub= await getPub("chandan")
+        console.log(pub);
+}
+
+      getRecipeAW();
     </script>
   </body>
 </html>
