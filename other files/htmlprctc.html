@@ -37,10 +37,6 @@
 
       //  getRecipe()
 
-
-
-
-
       // new way to work with Ajax using promises
 
       const getIDs = new Promise((resolve, reject) => {
@@ -93,21 +89,25 @@
       //     console.log("some error occured");
       //   });
 
-
-
       //consuming promises using Await function
       async function getRecipeAW() {
         const getID = await getIDs;
         console.log(getID);
 
-        const recipe= await getRecipe(getID[2])
+        const recipe = await getRecipe(getID[2]);
         console.log(recipe);
 
-        const pub= await getPub("chandan")
+        const pub = await getPub("chandan");
         console.log(pub);
-}
 
-      getRecipeAW();
+        return recipe;
+      }
+
+      //  var result= getRecipeAW();
+      //  console.log(result);
+      //this code will not work because this is a synchronous code and it will run before getRecipeAW()
+
+      getRecipeAW().then((result) => console.log(result)); //to use return val from a async function we nee dto use then()
     </script>
   </body>
 </html>
