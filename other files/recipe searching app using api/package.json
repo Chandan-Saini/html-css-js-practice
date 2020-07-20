@@ -4,7 +4,8 @@
   "description": "this is a app made using api for finding recipe",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "author": "chandan kumar",
   "license": "ISC",

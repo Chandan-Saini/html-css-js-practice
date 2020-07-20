@@ -6,5 +6,4 @@ module.exports = {
     path: path.resolve(__dirname, "dist/js"), //this path should be absolute so we require path, and here dirname is current absolute path which will get adds in dist/js
     filename: "bundle.js",
   },
-  mode:'development'
 };
