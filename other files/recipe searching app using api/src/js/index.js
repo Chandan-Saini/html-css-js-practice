@@ -1,4 +1,4 @@
-import num from './test '
+import num from './test'
 
 console.log(`I imported ${num} from other module.........................
 ........................................`);
