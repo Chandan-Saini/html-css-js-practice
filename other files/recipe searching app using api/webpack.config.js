@@ -4,10 +4,11 @@ module.exports = {
   entry: "./src/js/index.js", //form here bundling starts
   output: {
     //here bundling will be stored or saved
-    path: path.resolve(__dirname, "dist/js"), //this path should be absolute so we require path, and here dirname is current absolute path which will get adds in dist/js
-    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"), //this path should be absolute so we require path, and here dirname is current absolute path which will get adds in dist/js,
+                                              // now earlier we have written path as dist/js but it was not helping to run webpack dev server automatically so we changed the path to dist only
+    filename: "js/bundle.js"             //earlier here path was only name of file bundle.js but webpack server was not running automatically so we used path as js/bundle.js
   },
   devServer: {
-    contentBase: "./dist", //this is the path where webpack have to store data
-  },
+    contentBase: "./dist" //this is the path where webpack have to store data
+  }
 };
