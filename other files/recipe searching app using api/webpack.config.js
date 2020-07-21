@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin= require("html-webpack-plugin")
 
 module.exports = {
   entry: "./src/js/index.js", //form here bundling starts
@@ -10,5 +11,11 @@ module.exports = {
   },
   devServer: {
     contentBase: "./dist" //this is the path where webpack have to store data
-  }
+  },
+  plugins:[
+    new HtmlWebpackPlugin({
+      filename:"index.html",
+      template:"./src/index.html"
+    })
+  ]
 };
