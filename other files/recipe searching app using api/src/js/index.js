@@ -1,3 +1,3 @@
 import num from './test'
-
-console.log(`I imported ${num} from other module....called test.js`);
+const x=23
+console.log(`I imported ${num} from other ${x} module....called test.js`);

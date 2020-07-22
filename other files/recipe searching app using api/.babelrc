@@ -1,11 +1,11 @@
 {
-  "preset": [
+  "presets": [
     //this is the code to tell that on what type of environment we want babel to work with and here we passed browsers and we want babel to work on every browser with last 5 versions and on internet explorer 8 and above
-    "env",
+    ["env",
     {
-      "target": {
-        "browsers": ["last 5 versions", "ie >= 8"]
+      "targets": {
+        "browser": ["last 5 versions", "ie >= 8"]
       }
-    }
+    }]
   ]
 }

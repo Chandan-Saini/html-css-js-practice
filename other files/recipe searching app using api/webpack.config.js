@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin= require("html-webpack-plugin")
 
 module.exports = {
-  entry: "./src/js/index.js", //form here bundling starts
+  entry: ["babel-polyfill","./src/js/index.js"], //form here bundling starts
   output: {
     //here bundling will be stored or saved
     path: path.resolve(__dirname, "dist"), //this path should be absolute so we require path, and here dirname is current absolute path which will get adds in dist/js,
