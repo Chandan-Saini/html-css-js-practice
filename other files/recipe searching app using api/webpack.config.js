@@ -17,5 +17,16 @@ module.exports = {
       filename:"index.html",
       template:"./src/index.html"
     })
-  ]
+  ],
+  module:{                   //it contains code for loader
+    rules:[
+      {
+        test: /\.js$/,      //this line means loader need to find files ends with .js and work on that
+        exclude:/node_modules/,    //this line means loader needs to exclude this file to work with
+        use:{
+          loader:'babel-loader'   //the loader we want to use
+        }
+      }
+    ]
+  }
 };
