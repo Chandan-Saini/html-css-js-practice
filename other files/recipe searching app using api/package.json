@@ -11,6 +11,7 @@
   "author": "chandan kumar",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "babel-loader": "^8.1.0",
