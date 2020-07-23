@@ -1,0 +1,1 @@
+export default "I am a string from Search.js file"

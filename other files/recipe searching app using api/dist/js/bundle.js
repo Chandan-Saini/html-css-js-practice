@@ -3561,19 +3561,31 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test */ \"./src/js/test.js\");\n\r\nconst x=23\r\nconsole.log(`I imported ${_test__WEBPACK_IMPORTED_MODULE_0__[\"default\"]} from other ${x} module....called test.js`);\r\n\r\nlet timingpromise = new Promise((resolve, reject) => {\r\n    setTimeout(function () {\r\n        resolve(\"Promise is resolved!\");\r\n    }, 1000);\r\n});\r\n\r\ntimingpromise.then((msg) => {\r\n    console.log(\"%c\" + msg, \"font-size:25px;color:red;\");\r\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./models/Search */ \"./src/js/models/Search.js\");\n/* harmony import */ var _views_searchView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/searchView */ \"./src/js/views/searchView.js\");\n\r\n\r\n\r\n// import mul from \"./views/searchView\"\r\n// import id from \"./views/searchView\"\r\n\r\nconsole.log(`this is a sum ${Object(_views_searchView__WEBPACK_IMPORTED_MODULE_1__[\"add\"])(_views_searchView__WEBPACK_IMPORTED_MODULE_1__[\"id\"], 2)}, this is mul ${Object(_views_searchView__WEBPACK_IMPORTED_MODULE_1__[\"mul\"])(3,2)}, and thsi is string ${_models_Search__WEBPACK_IMPORTED_MODULE_0__[\"default\"]}`);\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
-/***/ "./src/js/test.js":
-/*!************************!*\
-  !*** ./src/js/test.js ***!
-  \************************/
+/***/ "./src/js/models/Search.js":
+/*!*********************************!*\
+  !*** ./src/js/models/Search.js ***!
+  \*********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconsole.log(\"imported module.\");\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (9999999999999965353786769);\r\n\n\n//# sourceURL=webpack:///./src/js/test.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (\"I am a string from Search.js file\");\n\n//# sourceURL=webpack:///./src/js/models/Search.js?");
+
+/***/ }),
+
+/***/ "./src/js/views/searchView.js":
+/*!************************************!*\
+  !*** ./src/js/views/searchView.js ***!
+  \************************************/
+/*! exports provided: sum, mul, id */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sum\", function() { return sum; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"mul\", function() { return mul; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"id\", function() { return id; });\nconst sum= (a,b)=> a+b\r\nconst mul= (a,b)=> a*b\r\nconst id=23\n\n//# sourceURL=webpack:///./src/js/views/searchView.js?");
 
 /***/ }),
 
