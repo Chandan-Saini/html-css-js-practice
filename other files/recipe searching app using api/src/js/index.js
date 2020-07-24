@@ -1,6 +1,26 @@
 import Search from './models/Search'
 
-const search= new Search("pizza")
+const state={}
 
-console.log(search);
-search.getResults()
+const controlSearch = async ()=>{
+
+    const query="pizza"
+    
+      state.search = new Search(query);
+
+
+     await state.search.getResults();
+     console.log(state.search.result);
+    
+    
+}
+
+document.querySelector(".search").addEventListener("click", (e) => {
+    e.preventDefault()
+    controlSearch()
+});
+
+
+
+
+
