@@ -59,10 +59,12 @@ const controlRecipe= async ()=>{
 
    try {
      await state.recipe.getRecipe()
-     console.log(state.recipe);
+     console.log(state.recipe.ingredients);
+     state.recipe.parseIngredients()
 
      state.recipe.calcTime()
      state.recipe.calcServings()
+     console.log(state.recipe);
      
    } catch (error) {
       alert(error)
