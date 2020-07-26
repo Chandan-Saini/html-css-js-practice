@@ -16,12 +16,19 @@ const controlSearch = async ()=>{
     searchView.clearInput()
     searchView.clearResults()
     renderLoader(elements.searchRes)
+    
+    try {
+      
+      await state.search.getResults();
+ 
+      clearLoader()
+     searchView.renderResults(state.search.result)
+      
+    } catch (error) {
+      alert(error)
+      clearLoader()
+    }
 
-     await state.search.getResults();
-
-     clearLoader()
-    searchView.renderResults(state.search.result)
-     
   }
   }
 
@@ -41,7 +48,28 @@ elements.searchResPages.addEventListener('click',e=>{
 })
 
 
+const controlRecipe= async ()=>{
+    
 
-const r= new Recipe(46956)
-r.getRecipe()
-console.log(r);
+ const id= window.location.hash.replace("#","")
+
+ if (id) {
+   
+   state.recipe = new Recipe(id)
+
+   try {
+     await state.recipe.getRecipe()
+     console.log(state.recipe);
+
+     state.recipe.calcTime()
+     state.recipe.calcServings()
+     
+   } catch (error) {
+      alert(error)
+   }
+ }
+}
+
+// window.addEventListener("hashchange",controlRecipe)
+// window.addEventListener("load",controlRecipe)
+["hashchange","load"].forEach(event=> window.addEventListener(event,controlRecipe))
