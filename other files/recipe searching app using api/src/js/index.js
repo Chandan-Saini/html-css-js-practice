@@ -56,17 +56,23 @@ const controlRecipe= async ()=>{
  const id= window.location.hash.replace("#","")
 
  if (id) {
-   
+  
+  recipeView.clearRecipe()
+  renderLoader(elements.recipe)
+
    state.recipe = new Recipe(id)
 
    try {
      await state.recipe.getRecipe()
      console.log(state.recipe.ingredients);
      state.recipe.parseIngredients()
+    
 
      state.recipe.calcTime()
      state.recipe.calcServings()
-     console.log(state.recipe);
+     
+     clearLoader()
+     recipeView.renderRecipe(state.recipe)
      
    } catch (error) {
       alert(error)
