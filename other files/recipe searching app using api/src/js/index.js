@@ -78,7 +78,10 @@ const controlRecipe= async ()=>{
      state.recipe.calcServings()
      
      clearLoader()
-     recipeView.renderRecipe(state.recipe)
+     recipeView.renderRecipe(
+       state.recipe,
+       state.likes.isLiked(id)
+       )
      
    } catch (error) {
       alert(error)
@@ -104,10 +107,8 @@ const controlList = () => {
     });
 }
 
-/** 
- * LIKE CONTROLLER 
- */
 
+/* LIKE CONTROLLER */
  const controlLike = () => {
     if (!state.likes) state.likes = new Likes();
     const currentID = state.recipe.id;
