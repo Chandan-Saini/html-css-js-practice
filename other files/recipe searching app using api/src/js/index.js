@@ -5,6 +5,7 @@ import Likes from './models/Likes'
 import * as searchView from "./views/searchView"
 import * as recipeView from "./views/recipeView"
 import * as listView from "./views/listView"
+import * as likesView from "./views/likesView"
 import { elements, renderLoader, clearLoader } from "./views/base"
 
 
@@ -104,9 +105,11 @@ const controlList = () => {
 }
 
 /** 
- * LIKE CONTROLLER
+ * LIKE CONTROLLER 
  */
-const controlLike = () => {
+state.likes= new Likes()
+likesView.toggleLikeMenu(state.likes.getNumLikes())
+ const controlLike = () => {
     if (!state.likes) state.likes = new Likes();
     const currentID = state.recipe.id;
 
@@ -120,10 +123,10 @@ const controlLike = () => {
             state.recipe.img
         );
         // Toggle the like button
-        // likesView.toggleLikeBtn(true);
+        likesView.toggleLikeBtn(true);
 
         // Add like to UI list
-        // likesView.renderLike(newLike);
+        likesView.renderLike(newLike);
         console.log(state.likes);
 
     // User HAS liked current recipe
@@ -132,13 +135,13 @@ const controlLike = () => {
         state.likes.deleteLike(currentID);
 
         // Toggle the like button
-        // likesView.toggleLikeBtn(false);
+        likesView.toggleLikeBtn(false);
 
         // Remove like from UI list
-        // likesView.deleteLike(currentID);
+        likesView.deleteLike(currentID);
         console.log(state.likes);
     }
-    // likesView.toggleLikeMenu(state.likes.getNumLikes());
+    likesView.toggleLikeMenu(state.likes.getNumLikes());
 };
 
 // Handle delete and update list item events
