@@ -12,51 +12,12 @@
     <h1>
       practice of ES6 JS AJAX
     </h1>
-
+    <svg width="200" height="200">
+       <circle cx="80"  cy="80" r="70" stroke="green" fill="yellow" />
+    </svg>
     <script>
-     function whetherdata(placeID) {
-       fetch(
-        `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${placeID}`
-      ).then((result) => {
-        console.log(result);
-        return result.json();
-      })
-      .then( data =>{
-        const today= data.consolidated_weather[0]
-        console.log(`Here is the ${data.title}'s Min Temperature ${today.min_temp} and Max Temperature ${today.max_temp}`);}
-      )
-      }
-
-      // whetherdata(2487956)
-      // whetherdata(44418)
-
-
-
-
-
-      //Same code using async function
-    async function whetherdataWA(placeID) {
-         try{ 
-           const result = await fetch(
-             `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${placeID}`
-          )
-
-          const data= await result.json()
-          let tomorrow= data.consolidated_weather[1]
-           console.log(`Here is the ${data.title}'s Min Temperature ${tomorrow.min_temp} and Max Temperature ${tomorrow.max_temp}`)
-           return data
-           } catch(error){
-             alert(error)
-           }
-    }
-
-      whetherdataWA(2487956)
-
-      let london
-      whetherdataWA(44418).then(data=>{
-          london= data
-          console.log(london);
-      })
+    
+     
 
     </script>
   </body>
