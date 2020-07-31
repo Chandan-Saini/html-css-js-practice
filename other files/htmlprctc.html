@@ -14,23 +14,14 @@
     </h1>
     <svg width="600" height="600">
           
-  <!-- <g fill="none" stroke="red">
-    <path stroke-width="2" d="M5 20 l215 0" />
-    <path stroke-width="4" d="M5 40 l215 0" />
-    <path stroke-width="6" d="M5 60 l215 0" />
-  </g> -->
-
-  <!-- <g fill="none" stroke="black" stroke-width="6">
-    <path stroke-linecap="butt" d="M5 20 l215 0" />
-    <path stroke-linecap="round" d="M5 40 l215 0" />
-    <path stroke-linecap="square" d="M5 60 l215 0" />
-  </g> -->
-
-  <g fill="none" stroke="black" stroke-width="4">
-    <path stroke-dasharray="5,5" d="M5 20 l215 0" />
-    <path stroke-dasharray="10,10" d="M5 40 l215 0" />
-    <path stroke-dasharray="20,10,5,5,5,10" d="M5 60 l215 0" />
-  </g>
+    
+  <defs>
+    <filter id="f1" x="0" y="0">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+    </filter>
+  </defs>
+  <rect width="90" height="90" stroke="green" stroke-width="3"
+  fill="orange" filter="url(#f1)" />
 
 
     </svg>
