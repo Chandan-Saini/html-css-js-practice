@@ -18,12 +18,24 @@
     </p>
    
     <script>
-     let s = {name:"chan",age:20,gender:"male"}
+    
 
-     for(x in s){
-      //  console.log(x);
-       console.log(s[x]);
-     }
+    loop2:for(var i=0;i<10;i++){
+      if (i===2) {
+        console.log("loop2");
+      }
+      loop1: for(var j=0;j<10;j++){
+      console.log(i);
+      if (j===6) {
+        continue loop2
+      }
+    }
+      
+    }
+
+    
+
+    
      
     </script>
   </body>
