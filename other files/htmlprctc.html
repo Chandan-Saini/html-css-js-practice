@@ -20,15 +20,15 @@
     <script>
     
 
-   let a=10
-   b=20
-   console.log(a,b);
+  var text = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":2 , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
 
-let b
-    
-    
-   
-    
+var j= JSON.parse(text)
+console.log(j);
+
+
      
     </script>
   </body>
