@@ -20,12 +20,11 @@
     <script>
     
     let obj={name:"chandan",
-            age:20, 
-             set fun(age){
-               this.age=age
+            age:30, 
+             get fun(){
+               return this.age
              } }
-    obj.fun=30
-    console.log(obj.age);
+    console.log(obj.fun);
      
     </script>
   </body>
