@@ -19,15 +19,9 @@
    
     <script>
     
-    // let obj={name:"chandan",age:20}
-    // let obj={name:"chandan",age:20,date:new Date().getFullYear()}
-
-    // let obj={name:"chandan",age:20,fun:()=> "hello"}
-    //  obj.fun=obj.fun.toString()
-
-    let arr=["hello",2,10,function hel(){ return 20},{name:"chan"}]
-       arr[3]= arr[3].toString()
-    console.log(JSON.stringify(arr));
+    let obj={name:"chandan",age:20, fun:()=> 20,ob:{age:"30"} }
+    
+    console.log(Object.values(obj));
      
     </script>
   </body>
