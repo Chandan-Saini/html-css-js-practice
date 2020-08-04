@@ -19,9 +19,13 @@
    
     <script>
     
-    let obj={name:"chandan",age:20, fun:()=> 20,ob:{age:"30"} }
-    
-    console.log(Object.values(obj));
+    let obj={name:"chandan",
+            age:20, 
+             set fun(age){
+               this.age=age
+             } }
+    obj.fun=30
+    console.log(obj.age);
      
     </script>
   </body>
