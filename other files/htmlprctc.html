@@ -9,33 +9,28 @@
   </head>
 
   <body>
-    <h1 >
+    <h1>
       practice of JS from W3 schools
     </h1>
 
-    <p id="one">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cum voluptas blanditiis. Amet quae, magni placeat assumenda architecto soluta. Vero!
-    </p>
-   
+    <div id="d1">
+      <p id="one">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cum voluptas
+        blanditiis. Amet quae, magni placeat assumenda architecto soluta. Vero!
+      </p>
+      <p id="two">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cum voluptas
+        blanditiis. Amet quae, magni placeat assumenda architecto soluta. Vero!
+      </p>
+    </div>
+
     <script>
-    
-    var fun1={
-      addnames:function(){
-       return `full name is ${this.n1} ${this.n2}`
-      }
-    }
+      var p = document.createElement("p");
+      var t = document.createTextNode("lorem text new hello");
+      p.appendChild(t);
 
-    var names={
-      n1:"chan",
-      n2:"kumar"
-    }
-
-        console.log(fun1.addnames.apply(names));
-
-
-    
-
-    
+      var d = document.getElementById("d1");
+      d.appendChild(p);
     </script>
   </body>
 </html>
