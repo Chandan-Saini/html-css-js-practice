@@ -19,14 +19,22 @@
    
     <script>
     
-    let obj={fname:"chan",
-    fun:()=>{
-      return this
-    }}
+    var fun1={
+      addnames:function(){
+       return `full name is ${this.n1} ${this.n2}`
+      }
+    }
+
+    var names={
+      n1:"chan",
+      n2:"kumar"
+    }
+
+    console.log(fun1.addnames.call(names));
 
     
 
-    console.log(obj.fun());
+    
     </script>
   </body>
 </html>
