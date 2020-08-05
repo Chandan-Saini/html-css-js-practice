@@ -22,15 +22,34 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cum voluptas
         blanditiis. Amet quae, magni placeat assumenda architecto soluta. Vero!
       </p>
-    </div>
+        </div>
+
+      <p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p><strong>Note:</strong> The geolocation property is not supported in IE8 and earlier versions.</p>
+
+<p id="demo"></p>
+      
+  
 
     <script>
-      var p = document.createElement("p");
-      var t = document.createTextNode("lorem text new hello");
-      p.appendChild(t);
+      var x = document.getElementById("demo");
 
-      var d = document.getElementById("d1");
-      d.appendChild(p);
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+
     </script>
   </body>
 </html>
