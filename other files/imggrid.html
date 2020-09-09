@@ -1,165 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flex Box Image Grid</title>
-</head>
+  </head>
 
-<style>
-    *{
-        box-sizing: border-box;
+  <style>
+    * {
+      box-sizing: border-box;
     }
 
-    body{
-        margin: 0px;
+    body {
+      margin: 0px;
     }
 
-    h1{
-        text-align: center;
-        animation: forh1 5s ease  infinite  ;
-        border: 1px solid transparent;
-        border-radius: 10px;
-        padding: 30px;
-        background-color: rgb(228, 222, 221);
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 5px 5px 10px ;
-        
+    h1 {
+      text-align: center;
+      animation: forh1 5s ease infinite;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      padding: 30px;
+      background-color: rgb(228, 222, 221);
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 5px 5px 10px;
     }
 
-    @keyframes forh1{
-         0%{ color:black}
-         25%{ color:rgb(240, 122, 11)}
-         50%{ color:rgb(21, 109, 209)}
-         75%{ color:rgb(60, 245, 13)}
-         100%{ color:rgb(214, 26, 252)}
+    @keyframes forh1 {
+      0% {
+        color: black;
+      }
+      25% {
+        color: rgb(240, 122, 11);
+      }
+      50% {
+        color: rgb(21, 109, 209);
+      }
+      75% {
+        color: rgb(60, 245, 13);
+      }
+      100% {
+        color: rgb(214, 26, 252);
+      }
     }
 
-    .row{
-        display: flex;
-        flex-wrap: wrap;
-       
-        padding: 0px 4px;
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+
+      padding: 0px 4px;
     }
 
-    div.column{
-        /* width: 25%; */
-        flex: 25%;
-        max-width: 25%;
-        padding: 0 4px;
-        /* margin-top: 20px; */
-       
+    div.column {
+      /* width: 25%; */
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+      /* margin-top: 20px; */
     }
 
-   img{
-       width: 100%;
-       vertical-align: middle;
+    img {
+      width: 100%;
+      vertical-align: middle;
       margin-top: 8px;
-      border: 2px solid ;
+      border: 2px solid;
       border-radius: 10px;
       transition: 5s;
-     
-   }
-
-   img:hover{
-       /* flex: 100%;
-       max-width: 100%; */
-       transform: scale(2, 2);
-       
-   }
-
-   @media (max-width: 900px) {
-        div.column{
-            flex: 50%;
-            max-width: 50%;
-        }
-   }
-
-   @media (max-width: 700px) {
-        div.column{
-            flex: 100%;
-            max-width: 100%;
-        }
-   }
-  
-
-   a{
-       text-decoration: none;
-       color: yellowgreen;
-       font-size: 30px;
-       display: inline-block;
-       margin-top: 30px;
-       margin-left: 10px;
-       margin-bottom: 10px;
-       animation: fora 1s 1s 3 ;
-       
-   }
-
-    @keyframes fora{
-         0%{ color:black}
-         25%{ color:rgb(240, 122, 11)}
-         50%{ color:rgb(21, 109, 209)}
-         75%{ color:rgb(60, 245, 13)}
-         100%{ color:rgb(214, 26, 252)}
     }
 
-</style>
-<body>
+    img:hover {
+      /* flex: 100%;
+       max-width: 100%; */
+      transform: scale(2, 2);
+    }
 
-    
-        <h1>This is the Image grid using CSS flexbox</h1>
-    
-        <a href="../index.html">Go Back Home</a>
+    @media (max-width: 900px) {
+      div.column {
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+
+    @media (max-width: 700px) {
+      div.column {
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: yellowgreen;
+      font-size: 30px;
+      display: inline-block;
+      margin-top: 30px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      animation: fora 1s 1s 3;
+    }
+
+    @keyframes fora {
+      0% {
+        color: black;
+      }
+      25% {
+        color: rgb(240, 122, 11);
+      }
+      50% {
+        color: rgb(21, 109, 209);
+      }
+      75% {
+        color: rgb(60, 245, 13);
+      }
+      100% {
+        color: rgb(214, 26, 252);
+      }
+    }
+  </style>
+  <body>
+    <h1>This is the Image grid using CSS flexbox</h1>
+
+    <a href="../index.html">Go Back Home</a>
 
     <div class="row">
-        
+      <div class="column">
+        <img
+          src="https://i.pinimg.com/736x/cf/59/82/cf59821eabc77942bc0100ebfd3551d4.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://wallpaperset.com/w/full/a/b/0/173683.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://i.pinimg.com/736x/43/3e/12/433e12f99d4042aa83e70a30c7933365.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://i.pinimg.com/564x/87/2f/c2/872fc2f7a060a4771ba6df32ec778ae9.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://www.desktopbackground.org/p/2012/11/07/480096_most-beautiful-nature-wallpaper-backgrounds-hd-6-hd-3d-unique_960x660_h.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://img.freepik.com/free-photo/night-landscape-with-tree-against-space-sky_1048-11940.jpg?size=626&ext=jpg"
+          alt=""
+          class="item"
+        />
+      </div>
 
-            <div class="column">
-                <img src="https://i.pinimg.com/736x/cf/59/82/cf59821eabc77942bc0100ebfd3551d4.jpg" alt="" class="item">
-                <img src="https://wallpaperset.com/w/full/a/b/0/173683.jpg" alt="" class="item">
-                <img src="https://i.pinimg.com/736x/43/3e/12/433e12f99d4042aa83e70a30c7933365.jpg" alt="" class="item">
-                <img src="https://i.pinimg.com/564x/87/2f/c2/872fc2f7a060a4771ba6df32ec778ae9.jpg" alt="" class="item">
-                <img src="https://www.desktopbackground.org/p/2012/11/07/480096_most-beautiful-nature-wallpaper-backgrounds-hd-6-hd-3d-unique_960x660_h.jpg" alt="" class="item">
-                <img src="https://lh3.googleusercontent.com/proxy/pADs79PkO8juSuFvOFS5O15fNLs7aVUcRFM-XYU9Ij1ukzDxO0lYXDEvDEwwI5y2cXx08YDSkeXnmEZUooAFZXq1rQOtDh-hlYoOLLKlJJwOeG8OeUN2fgVHV7kQCpDPr_09BrvomcVZqMwCDh9gxjOrrDk" alt="" class="item">
-            </div>
+      <div class="column">
+        <img
+          src="https://i.pinimg.com/564x/87/2f/c2/872fc2f7a060a4771ba6df32ec778ae9.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://i.pinimg.com/736x/cf/59/82/cf59821eabc77942bc0100ebfd3551d4.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://wallpaperset.com/w/full/a/b/0/173683.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://i.pinimg.com/736x/43/3e/12/433e12f99d4042aa83e70a30c7933365.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://www.desktopbackground.org/p/2012/11/07/480096_most-beautiful-nature-wallpaper-backgrounds-hd-6-hd-3d-unique_960x660_h.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://img.freepik.com/free-photo/night-landscape-with-tree-against-space-sky_1048-11940.jpg?size=626&ext=jpg"
+          alt=""
+          class="item"
+        />
+      </div>
 
+      <div class="column">
+        <img
+          src="https://i.pinimg.com/736x/43/3e/12/433e12f99d4042aa83e70a30c7933365.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://i.pinimg.com/564x/87/2f/c2/872fc2f7a060a4771ba6df32ec778ae9.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://www.desktopbackground.org/p/2012/11/07/480096_most-beautiful-nature-wallpaper-backgrounds-hd-6-hd-3d-unique_960x660_h.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://i.pinimg.com/736x/cf/59/82/cf59821eabc77942bc0100ebfd3551d4.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://wallpaperset.com/w/full/a/b/0/173683.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://img.freepik.com/free-photo/night-landscape-with-tree-against-space-sky_1048-11940.jpg?size=626&ext=jpg"
+          alt=""
+          class="item"
+        />
+      </div>
 
-            <div class="column">
-                <img src="https://i.pinimg.com/564x/87/2f/c2/872fc2f7a060a4771ba6df32ec778ae9.jpg" alt="" class="item">
-                <img src="https://i.pinimg.com/736x/cf/59/82/cf59821eabc77942bc0100ebfd3551d4.jpg" alt="" class="item">
-                <img src="https://wallpaperset.com/w/full/a/b/0/173683.jpg" alt="" class="item">
-                <img src="https://i.pinimg.com/736x/43/3e/12/433e12f99d4042aa83e70a30c7933365.jpg" alt="" class="item">
-                <img src="https://www.desktopbackground.org/p/2012/11/07/480096_most-beautiful-nature-wallpaper-backgrounds-hd-6-hd-3d-unique_960x660_h.jpg" alt="" class="item">
-                <img src="https://lh3.googleusercontent.com/proxy/pADs79PkO8juSuFvOFS5O15fNLs7aVUcRFM-XYU9Ij1ukzDxO0lYXDEvDEwwI5y2cXx08YDSkeXnmEZUooAFZXq1rQOtDh-hlYoOLLKlJJwOeG8OeUN2fgVHV7kQCpDPr_09BrvomcVZqMwCDh9gxjOrrDk" alt="" class="item">
-            </div>
-
-
-            <div class="column">
-                <img src="https://i.pinimg.com/736x/43/3e/12/433e12f99d4042aa83e70a30c7933365.jpg" alt="" class="item">
-                <img src="https://i.pinimg.com/564x/87/2f/c2/872fc2f7a060a4771ba6df32ec778ae9.jpg" alt="" class="item">
-                <img src="https://www.desktopbackground.org/p/2012/11/07/480096_most-beautiful-nature-wallpaper-backgrounds-hd-6-hd-3d-unique_960x660_h.jpg" alt="" class="item">
-                <img src="https://i.pinimg.com/736x/cf/59/82/cf59821eabc77942bc0100ebfd3551d4.jpg" alt="" class="item">
-                <img src="https://wallpaperset.com/w/full/a/b/0/173683.jpg" alt="" class="item">
-                <img src="https://lh3.googleusercontent.com/proxy/pADs79PkO8juSuFvOFS5O15fNLs7aVUcRFM-XYU9Ij1ukzDxO0lYXDEvDEwwI5y2cXx08YDSkeXnmEZUooAFZXq1rQOtDh-hlYoOLLKlJJwOeG8OeUN2fgVHV7kQCpDPr_09BrvomcVZqMwCDh9gxjOrrDk" alt="" class="item">
-            </div>
-
-
-            <div class="column">
-                <img src="https://wallpaperset.com/w/full/a/b/0/173683.jpg" alt="" class="item">
-                <img src="https://www.desktopbackground.org/p/2012/11/07/480096_most-beautiful-nature-wallpaper-backgrounds-hd-6-hd-3d-unique_960x660_h.jpg" alt="" class="item">
-                <img src="https://i.pinimg.com/736x/43/3e/12/433e12f99d4042aa83e70a30c7933365.jpg" alt="" class="item">
-                <img src="https://lh3.googleusercontent.com/proxy/pADs79PkO8juSuFvOFS5O15fNLs7aVUcRFM-XYU9Ij1ukzDxO0lYXDEvDEwwI5y2cXx08YDSkeXnmEZUooAFZXq1rQOtDh-hlYoOLLKlJJwOeG8OeUN2fgVHV7kQCpDPr_09BrvomcVZqMwCDh9gxjOrrDk" alt="" class="item">
-                <img src="https://i.pinimg.com/564x/87/2f/c2/872fc2f7a060a4771ba6df32ec778ae9.jpg" alt="" class="item">
-                <img src="https://i.pinimg.com/736x/cf/59/82/cf59821eabc77942bc0100ebfd3551d4.jpg" alt="" class="item">
-            </div>
-
-      
-
+      <div class="column">
+        <img
+          src="https://wallpaperset.com/w/full/a/b/0/173683.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://www.desktopbackground.org/p/2012/11/07/480096_most-beautiful-nature-wallpaper-backgrounds-hd-6-hd-3d-unique_960x660_h.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://i.pinimg.com/736x/43/3e/12/433e12f99d4042aa83e70a30c7933365.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://img.freepik.com/free-photo/night-landscape-with-tree-against-space-sky_1048-11940.jpg?size=626&ext=jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://i.pinimg.com/564x/87/2f/c2/872fc2f7a060a4771ba6df32ec778ae9.jpg"
+          alt=""
+          class="item"
+        />
+        <img
+          src="https://i.pinimg.com/736x/cf/59/82/cf59821eabc77942bc0100ebfd3551d4.jpg"
+          alt=""
+          class="item"
+        />
+      </div>
     </div>
 
-<a href="../index.html">Go Back Home</a>
-
-</body>
+    <a href="../index.html">Go Back Home</a>
+  </body>
 </html>
